@@ -1,0 +1,641 @@
+/* 慢島劇團 Slow Island Theatre - 專屬視覺樣式表（東南亞風土多彩與傳統圖騰增強版） */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  /* 《南薑．香茅．罌粟花》主視覺油彩手繪特色色譜 (Key Visual Artisan Palette) */
+  --color-terracotta: #d83a27; /* 罌粟暖紅/手繪朱紅 */
+  --color-terracotta-dark: #b52818;
+  --color-terracotta-light: #fef0ee;
+  --color-crimson: #c82d1c; /* 熱烈紅花 */
+  --color-crimson-dark: #8c1d1d;
+  --color-crimson-light: #fae8e6;
+  --color-ruby: #a91b2c; /* 南薑胭脂紅 */
+
+  /* 香茅生機翠綠與礦物深紫 */
+  --color-lemongrass: #388e3c; /* 香茅生機翠綠 */
+  --color-lemongrass-dark: #236028;
+  --color-lemongrass-light: #edf7ee;
+  --color-plum: #6b214e; /* 南薑筆觸礦物深紫 */
+
+  /* 東南亞薑黃、藏紅花與織錦金 */
+  --color-ochre: #d97706; /* 溫暖薑黃 */
+  --color-ochre-dark: #9e5b08;
+  --color-saffron: #e59b2b; /* 藏紅花與薑黃金 */
+  --color-saffron-dark: #c57e17;
+  --color-saffron-light: #fef8ec;
+  
+  --color-peacock: #2e7d32; /* 自然草木翠綠 */
+  --color-peacock-dark: #1b5e20;
+  --color-peacock-light: #e8f5e9;
+
+  --color-batik: #1d3557; /* 傳統蠟染靛青藍 */
+  --color-batik-dark: #12233a;
+  --color-batik-light: #eef4f9;
+
+  --color-brocade: #d4af37; /* 泰緬織錦金線 */
+  --color-brocade-dark: #b8860b;
+  --color-brocade-light: #fcf8eb;
+
+  --color-forest: #c82d1c; /* 核心主色轉向鮮活朱紅 */
+  --color-forest-dark: #23150f; /* 深柚木墨棕 */
+  --color-forest-light: #f7ede8;
+  --color-linen: #faf6ee; /* 網頁整體底色：溫潤天然藝術紙色 */
+  --color-linen-warm: #f4ede1; /* 溫和手揉宣紙/麻紙暖色 */
+  --color-ink: #231f1d; /* 手繪水墨溫潤深黑 */
+  --color-ink-muted: #665b53;
+  --color-border: #e8ddca;
+  --color-amber: #d97724;
+  
+  --font-serif: 'Noto Serif TC', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-linen);
+  color: var(--color-ink);
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.75;
+  background-color: var(--color-linen);
+  position: relative;
+}
+
+/* 底層金色大氣光感：使用獨立 GPU 合成層替代 background-attachment: fixed，徹底消除滾動卡頓 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -20;
+  background-image: 
+    radial-gradient(ellipse 100% 60% at 50% 0%, rgba(212, 175, 55, 0.18) 0%, transparent 75%),
+    radial-gradient(ellipse 80% 50% at 85% 35%, rgba(229, 155, 43, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 50% at 15% 65%, rgba(212, 175, 55, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 90% 40% at 50% 100%, rgba(212, 175, 55, 0.18) 0%, transparent 75%);
+  transform: translateZ(0);
+}
+
+/* 字型專用 class */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* 慢島劇團專屬文藝解說字體 (Literary Theatrical Typography) */
+.font-literary {
+  font-family: 'Noto Serif TC', 'Songti TC', 'Source Han Serif TC', Georgia, serif;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.075em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 東南亞大地與香料色調 + 輕透手揉紙磨砂質感 (Frosted Linen Paper) + 底層金色微光 - 確保舞台劇照一直貫穿滾動到底 */
+.bg-linen {
+  background-color: rgba(250, 246, 238, 0.65) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  background-image: 
+    radial-gradient(ellipse 70% 40% at 85% 15%, rgba(212, 175, 55, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 15% 85%, rgba(229, 155, 43, 0.10) 0%, transparent 65%) !important;
+}
+
+.bg-linen-warm {
+  background-color: rgba(244, 237, 225, 0.68) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  background-image: 
+    radial-gradient(ellipse 75% 50% at 20% 20%, rgba(212, 175, 55, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 65% 45% at 80% 80%, rgba(229, 155, 43, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 30% at 50% 100%, rgba(212, 175, 55, 0.16) 0%, transparent 70%) !important;
+}
+
+/* 影音專區深色透光質感 */
+#media {
+  background-color: rgba(28, 16, 11, 0.82) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* 頁尾深色半透質感 */
+footer {
+  background-color: rgba(35, 18, 12, 0.88) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* 沉浸式劇場背景切換專用微調 */
+.backdrop-thumb-btn.active-backdrop {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+}
+
+.text-terracotta {
+  color: var(--color-terracotta);
+}
+
+.bg-terracotta {
+  background-color: var(--color-terracotta);
+}
+
+.hover-bg-terracotta-dark:hover {
+  background-color: var(--color-terracotta-dark);
+}
+
+.border-terracotta {
+  border-color: var(--color-terracotta);
+}
+
+.text-forest {
+  color: var(--color-forest);
+}
+
+.bg-forest {
+  background-color: var(--color-forest);
+}
+
+/* ==========================================================================
+   緬甸克欽族 (Jinghpaw / Kachin) 傳統幾何織錦與圖騰飾紋系統
+   ========================================================================== */
+
+/* 1. 緬甸克欽族經典重疊菱格幾何織錦飾帶 (Kachin Diamond Lattice & Chevron Band) */
+.totem-band {
+  height: 18px;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 48px 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='18' viewBox='0 0 48 18'%3E%3Crect width='48' height='18' fill='%231e1b18' fill-opacity='0.08'/%3E%3Cpath d='M0,1 L4,3 L8,1 L12,3 L16,1 L20,3 L24,1 L28,3 L32,1 L36,3 L40,1 L44,3 L48,1' fill='none' stroke='%23d4af37' stroke-width='0.9' opacity='0.9'/%3E%3Cpath d='M0,17 L4,15 L8,17 L12,15 L16,17 L20,15 L24,17 L28,15 L32,17 L36,15 L40,17 L44,15 L48,17' fill='none' stroke='%23d4af37' stroke-width='0.9' opacity='0.9'/%3E%3Cpath d='M24,2 L36,9 L24,16 L12,9 Z' fill='%23c82d1c' fill-opacity='0.28' stroke='%23c82d1c' stroke-width='1.3'/%3E%3Cpath d='M0,9 L12,2 L12,16 Z' fill='%23c82d1c' fill-opacity='0.16' stroke='%23c82d1c' stroke-width='1.1'/%3E%3Cpath d='M48,9 L36,2 L36,16 Z' fill='%23c82d1c' fill-opacity='0.16' stroke='%23c82d1c' stroke-width='1.1'/%3E%3Cpath d='M24,4 L31,9 L24,14 L17,9 Z' fill='%232e7d32' fill-opacity='0.85' stroke='%23f59e0b' stroke-width='1'/%3E%3Ccircle cx='24' cy='9' r='2' fill='%23ffffff' stroke='%23d4af37' stroke-width='0.7'/%3E%3Ccircle cx='0' cy='9' r='1.5' fill='%23f59e0b'/%3E%3Ccircle cx='48' cy='9' r='1.5' fill='%23f59e0b'/%3E%3Ccircle cx='12' cy='9' r='1.2' fill='%23ffffff'/%3E%3Ccircle cx='36' cy='9' r='1.2' fill='%23ffffff'/%3E%3Ccircle cx='24' cy='2' r='1' fill='%23f59e0b'/%3E%3Ccircle cx='24' cy='16' r='1' fill='%23f59e0b'/%3E%3C/svg%3E");
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.45), 0 1px 2px rgba(200, 45, 28, 0.25);
+  position: relative;
+  z-index: 2;
+}
+
+/* 2. 緬甸克欽族微型挑花幾何織帶 (Kachin Micro Cross-Stitch Ribbon) */
+.totem-band-sm {
+  height: 9px;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 24px 9px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='9' viewBox='0 0 24 9'%3E%3Cpath d='M0,4.5 L6,1 L12,4.5 L6,8 Z M12,4.5 L18,1 L24,4.5 L18,8 Z' fill='%23c82d1c' fill-opacity='0.25' stroke='%23d83a27' stroke-width='0.9'/%3E%3Cpath d='M6,2.5 L9,4.5 L6,6.5 L3,4.5 Z M18,2.5 L21,4.5 L18,6.5 L15,4.5 Z' fill='%232e7d32' stroke='%23f59e0b' stroke-width='0.6'/%3E%3Ccircle cx='6' cy='4.5' r='1.1' fill='%23ffffff'/%3E%3Ccircle cx='18' cy='4.5' r='1.1' fill='%23ffffff'/%3E%3Ccircle cx='12' cy='4.5' r='0.9' fill='%23f59e0b'/%3E%3Ccircle cx='0' cy='4.5' r='0.9' fill='%23f59e0b'/%3E%3Ccircle cx='24' cy='4.5' r='0.9' fill='%23f59e0b'/%3E%3C/svg%3E");
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.35);
+  position: relative;
+  z-index: 2;
+}
+
+/* 3. 緬甸克欽族目瑙縱歌太陽十字章節分界 (Kachin Manau Sunburst Divider) */
+.totem-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  opacity: 0.9;
+}
+
+.totem-divider::before {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(200, 45, 28, 0.25), #e59b2b, #2e7d32);
+}
+
+.totem-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #2e7d32, #e59b2b, rgba(200, 45, 28, 0.25), transparent);
+}
+
+.totem-divider-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c82d1c;
+  font-size: 0.95rem;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+/* 4. 緬甸克欽族手織菱形挑花底紋 (Kachin Handwoven Diamond Loom Texture) */
+.totem-pattern-bg {
+  position: relative;
+}
+
+.totem-pattern-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(#d4af37 1px, transparent 1px), 
+    radial-gradient(#c82d1c 1px, transparent 1px),
+    radial-gradient(#2e7d32 0.8px, transparent 0.8px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px, 8px 8px;
+  opacity: 0.08;
+}
+
+/* 5. 緬甸克欽族角隅幾何折角挑花飾件 (Kachin Stepped Chevron Corner) */
+.totem-corner-tl,
+.totem-corner-tr,
+.totem-corner-bl,
+.totem-corner-br {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.88;
+}
+
+.totem-corner-tl {
+  top: 8px;
+  left: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0,0 L22,0 L22,4 L4,4 L4,22 L0,22 Z' fill='%23d4af37' opacity='0.95'/%3E%3Cpath d='M5,5 L18,5 L18,8 L8,8 L8,18 L5,18 Z' fill='%23c82d1c' opacity='0.9'/%3E%3Cpath d='M9,9 L14,9 L14,12 L12,12 L12,14 L9,14 Z' fill='%232e7d32'/%3E%3Crect x='1' y='1' width='2.2' height='2.2' fill='%23ffffff'/%3E%3Crect x='19' y='1' width='2' height='2' fill='%23f59e0b'/%3E%3Crect x='1' y='19' width='2' height='2' fill='%23f59e0b'/%3E%3C/svg%3E");
+}
+
+.totem-corner-tr {
+  top: 8px;
+  right: 8px;
+  transform: scaleX(-1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0,0 L22,0 L22,4 L4,4 L4,22 L0,22 Z' fill='%23d4af37' opacity='0.95'/%3E%3Cpath d='M5,5 L18,5 L18,8 L8,8 L8,18 L5,18 Z' fill='%23c82d1c' opacity='0.9'/%3E%3Cpath d='M9,9 L14,9 L14,12 L12,12 L12,14 L9,14 Z' fill='%232e7d32'/%3E%3Crect x='1' y='1' width='2.2' height='2.2' fill='%23ffffff'/%3E%3Crect x='19' y='1' width='2' height='2' fill='%23f59e0b'/%3E%3Crect x='1' y='19' width='2' height='2' fill='%23f59e0b'/%3E%3C/svg%3E");
+}
+
+.totem-corner-bl {
+  bottom: 8px;
+  left: 8px;
+  transform: scaleY(-1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0,0 L22,0 L22,4 L4,4 L4,22 L0,22 Z' fill='%23d4af37' opacity='0.95'/%3E%3Cpath d='M5,5 L18,5 L18,8 L8,8 L8,18 L5,18 Z' fill='%23c82d1c' opacity='0.9'/%3E%3Cpath d='M9,9 L14,9 L14,12 L12,12 L12,14 L9,14 Z' fill='%232e7d32'/%3E%3Crect x='1' y='1' width='2.2' height='2.2' fill='%23ffffff'/%3E%3Crect x='19' y='1' width='2' height='2' fill='%23f59e0b'/%3E%3Crect x='1' y='19' width='2' height='2' fill='%23f59e0b'/%3E%3C/svg%3E");
+}
+
+.totem-corner-br {
+  bottom: 8px;
+  right: 8px;
+  transform: scale(-1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0,0 L22,0 L22,4 L4,4 L4,22 L0,22 Z' fill='%23d4af37' opacity='0.95'/%3E%3Cpath d='M5,5 L18,5 L18,8 L8,8 L8,18 L5,18 Z' fill='%23c82d1c' opacity='0.9'/%3E%3Cpath d='M9,9 L14,9 L14,12 L12,12 L12,14 L9,14 Z' fill='%232e7d32'/%3E%3Crect x='1' y='1' width='2.2' height='2.2' fill='%23ffffff'/%3E%3Crect x='19' y='1' width='2' height='2' fill='%23f59e0b'/%3E%3Crect x='1' y='19' width='2' height='2' fill='%23f59e0b'/%3E%3C/svg%3E");
+}
+
+/* 5. 劇目分類文化專屬徽章漸層 */
+.badge-migration {
+  background: linear-gradient(135deg, #8c1d1d 0%, #b83232 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 2px 8px rgba(140, 29, 29, 0.25);
+}
+
+.badge-social {
+  background: linear-gradient(135deg, #1d3557 0%, #2a4d69 100%);
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  box-shadow: 0 2px 8px rgba(29, 53, 87, 0.25);
+}
+
+.badge-children {
+  background: linear-gradient(135deg, #d97706 0%, #e59b2b 100%);
+  border: 1px solid rgba(254, 240, 138, 0.45);
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.25);
+}
+
+.badge-sitespecific {
+  background: linear-gradient(135deg, #165b4c 0%, #1f7a63 100%);
+  border: 1px solid rgba(167, 243, 208, 0.35);
+  box-shadow: 0 2px 8px rgba(22, 91, 76, 0.25);
+}
+
+/* 特色裝飾副標題 */
+.section-subtitle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+}
+
+.section-subtitle::before {
+  content: "❖";
+  font-size: 0.75rem;
+  color: #d4af37;
+}
+
+.section-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-terracotta), #d4af37);
+}
+
+/* 劇照卡片懸浮光影與底層金光飾邊 */
+.show-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(35, 21, 15, 0.06), 0 2px 10px rgba(212, 175, 55, 0.12);
+  border: 1px solid #dfcfb2;
+  position: relative;
+}
+
+/* 卡片底層微光金線 */
+.show-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4af37, #e59b2b, transparent);
+  opacity: 0.55;
+  pointer-events: none;
+  transition: all 0.35s ease;
+}
+
+.show-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -4px rgba(140, 29, 29, 0.16), 0 0 24px rgba(212, 175, 55, 0.45), 0 0 0 1px rgba(212, 175, 55, 0.65);
+}
+
+.show-card:hover::after {
+  opacity: 1;
+  height: 3px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.85);
+}
+
+.show-card .image-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.show-card .image-wrapper img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.show-card:hover .image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* 標籤按鈕狀態 */
+.filter-btn {
+  transition: all 0.25s ease;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #8c1d1d 0%, #5e1212 100%);
+  color: #ffffff;
+  border-color: #d4af37;
+  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.4);
+}
+
+/* 模態框（Modal）全域純淨彈窗架構：零 GPU 卡頓、原生內層硬體加速滾動（徹底解決卡頓與滑不下去） */
+.modal-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 999999 !important;
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  background-color: rgba(14, 8, 5, 0.82) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  overflow: hidden !important; /* 背景層絕不滾動，杜絕雙捲軸衝突與手勢攔截 */
+  touch-action: none !important; /* 防止行動端意外拉動背後頁面 */
+  padding: 1rem !important;
+  transition: opacity 0.2s ease, visibility 0.2s ease !important;
+}
+
+.modal-backdrop.active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.modal-dialog,
+.modal-content {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  max-height: 88vh !important;
+  background-color: #fdfbf7 !important;
+  color: #23150f !important;
+  border-radius: 1.5rem !important;
+  border: 1px solid #dfcfb2 !important;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(212, 175, 55, 0.35) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important; /* 外框固定整潔，內部捲動 */
+  margin: 0 !important;
+  transform: scale(0.96) translateY(8px) !important;
+  opacity: 0 !important;
+  pointer-events: auto !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+  z-index: 1000000 !important;
+}
+
+.modal-backdrop.active .modal-dialog,
+.modal-backdrop.active .modal-content {
+  transform: scale(1) translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* 核心滾動區域：原生極速滾動，觸控與滑鼠滾輪直接命中，保證 100% 順暢滑動到底 */
+.modal-scroll-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: contain !important;
+  padding: 1.5rem 2rem !important;
+}
+
+
+/* 影片響應式比例容器 */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 自定義細緻捲軸 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-linen);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cf9236;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
+}
+
+/* 東南亞熱帶香料劇場氛圍光感（薑黃金、茜草紅、孔雀翡翠綠交疊光暈） */
+.hero-glow {
+  position: relative;
+  background: 
+    radial-gradient(circle at 75% 25%, rgba(229, 155, 43, 0.28) 0%, rgba(212, 175, 55, 0.20) 25%, rgba(140, 29, 29, 0.12) 50%, transparent 80%),
+    radial-gradient(circle at 20% 65%, rgba(212, 175, 55, 0.18) 0%, rgba(22, 91, 76, 0.08) 45%, transparent 75%),
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(212, 175, 55, 0.24) 0%, transparent 70%);
+}
+
+/* 主推大卡片金色舞台背光光暈 (Golden Stage Footlight / Aura) */
+.golden-stage-glow {
+  position: relative;
+}
+
+.golden-stage-glow::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.38) 0%, rgba(229, 155, 43, 0.20) 40%, transparent 75%);
+  filter: blur(28px);
+  border-radius: 2.5rem;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* YouTube 影音深色區塊的底層金色聚光燈 (Golden Theatrical Spotlight) */
+.spotlight-glow {
+  background: 
+    radial-gradient(ellipse 65% 50% at 50% 0%, rgba(212, 175, 55, 0.32) 0%, transparent 70%),
+    radial-gradient(circle at 85% 85%, rgba(229, 155, 43, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 15% 90%, rgba(212, 175, 55, 0.18) 0%, transparent 60%);
+}
+
+/* 底層金色地光過渡層 (Golden Ground Glow) */
+.golden-bottom-glow {
+  position: relative;
+}
+
+.golden-bottom-glow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(212, 175, 55, 0.18) 0%, rgba(229, 155, 43, 0.06) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 頁尾底層金箔暮光 */
+footer.bg-forest-dark {
+  background: 
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 175, 55, 0.22) 0%, transparent 70%),
+    linear-gradient(to bottom, #1d110b 0%, #150c07 100%);
+  position: relative;
+}
+
+/* 織錦金邊框效果 */
+.border-songket-gold {
+  border-color: #d4af37;
+}
+
+.shadow-brocade {
+  box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.25);
+}
+
+/* ==========================================================================
+   舞台劇照適中尺寸檢視視窗 (Moderate-Sized Stage Photo Viewer)
+   依使用者指示：劇照不用太大、清晰呈現舞台細節、保持 10 張、極致流暢
+   ========================================================================== */
+#photo-viewer-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2000000 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(10, 8, 6, 0.88) !important;
+}
+
+#photo-viewer-modal.active {
+  display: flex !important;
+}
+
+#photo-viewer-modal img#pv-img {
+  max-width: 100% !important;
+  max-height: 54vh !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* ==================== 舞台精彩劇照輪播 Stage Carousel ==================== */
+#stage-carousel-container {
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(235, 220, 202, 0.4);
+}
+
+#carousel-thumbnails-strip {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+#carousel-thumbnails-strip::-webkit-scrollbar {
+  height: 5px;
+}
+
+#carousel-thumbnails-strip::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+}
+
+.carousel-thumb-btn {
+  flex-shrink: 0;
+  width: 50px;
+  height: 36px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.55;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.carousel-thumb-btn:hover {
+  opacity: 0.9;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-thumb-btn.active {
+  opacity: 1;
+  border-color: #d96523;
+  box-shadow: 0 0 0 2px #d96523;
+  transform: scale(1.06);
+}
