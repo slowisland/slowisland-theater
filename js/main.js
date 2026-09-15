@@ -2198,90 +2198,9 @@ const mediaVideos = [
   }
 ];
 
-// 劇作展示與分類狀態管理（方案 B 封箱式展開 + 方案 C 分類標籤切換）
-let isRepertoireExpanded = false;
-let currentRepertoireCategory = "all";
-
-function renderRepertoireByState() {
-  const container = document.getElementById("repertoire-grid");
-  const toggleContainer = document.getElementById("repertoire-toggle-container");
-  const toggleText = document.getElementById("repertoire-toggle-text");
-  const toggleIcon = document.getElementById("repertoire-toggle-icon");
-  if (!container) return;
-
-  if (currentRepertoireCategory === "all") {
-    if (!isRepertoireExpanded) {
-      // 預設精選前 4 檔代表作
-      renderRepertoire(productions.slice(0, 4));
-      if (toggleContainer) {
-        toggleContainer.classList.remove("hidden");
-        if (toggleText) toggleText.textContent = "展開探索其餘 13 檔原創劇目（2008–2026）";
-        if (toggleIcon) toggleIcon.textContent = "▾";
-      }
-    } else {
-      // 展開全部 17 檔
-      renderRepertoire(productions);
-      if (toggleContainer) {
-        toggleContainer.classList.remove("hidden");
-        if (toggleText) toggleText.textContent = "收起劇作列表（保留前 4 檔精選）";
-        if (toggleIcon) toggleIcon.textContent = "▲";
-      }
-    }
-  } else {
-    // 依分類過濾（各分類為 3~5 檔，直接完整呈現）
-    const filtered = productions.filter(p => p.category === currentRepertoireCategory);
-    renderRepertoire(filtered);
-    if (toggleContainer) {
-      toggleContainer.classList.add("hidden");
-    }
-  }
-}
-
-function toggleRepertoireExpansion() {
-  isRepertoireExpanded = !isRepertoireExpanded;
-  renderRepertoireByState();
-  if (!isRepertoireExpanded) {
-    const repEl = document.getElementById("repertoire");
-    if (repEl) {
-      repEl.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
-}
-window.toggleRepertoireExpansion = toggleRepertoireExpansion;
-
-function toggleFeaturedCredits() {
-  const drawer = document.getElementById("featured-credits-drawer");
-  const text = document.getElementById("featured-credits-toggle-text");
-  if (!drawer) return;
-  const isHidden = drawer.classList.contains("hidden");
-  if (isHidden) {
-    drawer.classList.remove("hidden");
-    if (text) text.textContent = "▲ 收起完整名單";
-  } else {
-    drawer.classList.add("hidden");
-    if (text) text.textContent = "查看完整演職員與技術團隊名單（30餘位）▾";
-  }
-}
-window.toggleFeaturedCredits = toggleFeaturedCredits;
-
-function toggleFeaturedReviews() {
-  const drawer = document.getElementById("featured-reviews-drawer");
-  const text = document.getElementById("featured-reviews-toggle-text");
-  if (!drawer) return;
-  const isHidden = drawer.classList.contains("hidden");
-  if (isHidden) {
-    drawer.classList.remove("hidden");
-    if (text) text.textContent = "▲ 收起其餘 8 篇劇評";
-  } else {
-    drawer.classList.add("hidden");
-    if (text) text.textContent = "📰 展開其餘 8 篇專文劇評與媒體報導 ▾";
-  }
-}
-window.toggleFeaturedReviews = toggleFeaturedReviews;
-
 // DOM 載入後初始化
 function initApp() {
-  renderRepertoireByState();
+  renderRepertoire(productions);
   renderHandbook(handbookArticles);
   initCategoryFilters();
   initStageCarousel();
@@ -2729,22 +2648,24 @@ function renderHandbook(articles) {
   });
 }
 
-// 劇目分類篩選（支援方案 C 分類標籤切換與動態封箱狀態）
+// 劇目分類篩選
 function initCategoryFilters() {
   const buttons = document.querySelectorAll(".filter-btn");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      buttons.forEach(b => {
-        b.classList.remove("active", "bg-[#8c1d1d]", "text-white");
-        b.classList.add("bg-white", "text-ink-muted");
-      });
+      buttons.forEach(b => b.classList.remove("active", "bg-[#38493d]", "text-white"));
+      buttons.forEach(b => b.classList.add("bg-white", "text-[#69655d]"));
       
-      btn.classList.add("active", "bg-[#8c1d1d]", "text-white");
-      btn.classList.remove("bg-white", "text-ink-muted");
+      btn.classList.add("active", "bg-[#38493d]", "text-white");
+      btn.classList.remove("bg-white", "text-[#69655d]");
 
       const cat = (btn.getAttribute && btn.getAttribute("data-category")) || (btn.dataset && btn.dataset.category) || "all";
-      currentRepertoireCategory = cat;
-      renderRepertoireByState();
+      if (cat === "all") {
+        renderRepertoire(productions);
+      } else {
+        const filtered = productions.filter(p => p.category === cat);
+        renderRepertoire(filtered);
+      }
     });
   });
 }
