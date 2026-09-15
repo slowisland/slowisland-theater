@@ -78,7 +78,7 @@
   </script>
 
   <!-- 自定義與增強樣式 -->
-  <link rel="stylesheet" href="css/style.css?v=20260915_v38">
+  <link rel="stylesheet" href="css/style.css?v=20260915_v39">
 </head>
 <body class="bg-linen text-ink antialiased">
 
@@ -226,15 +226,105 @@
 
   <!-- ==================== 英雄首頁 Hero Section（暗底配原版木刻金色版畫 Theatrical Obsidian & Authentic Woodcut Gold） ==================== -->
   <section class="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 text-white theatrical-dark-gold-hero">
-    <!-- 左側原版木刻質感金線版畫（100% 提取自使用者提供之圖稿，具東南亞質樸民俗刀刻紋理） -->
-    <div class="woodcut-gold-left-wrap" aria-hidden="true">
-      <img src="images/woodcut-motif-left-screen.png" alt="慢島劇團木刻金色民俗波紋" class="woodcut-gold-left-img">
-    </div>
+    <!-- ==================== 東南亞質樸木刻金色版畫向量圖騰 (Authentic Southeast Asian Woodcut Gold Relief) ==================== -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <!-- 核心金箔漸層定義 -->
+        <linearGradient id="goldLeafFan" x1="0%" y1="100%" x2="60%" y2="0%">
+          <stop offset="0%" stop-color="#784e12" stop-opacity="0.4"/>
+          <stop offset="20%" stop-color="#b8860b" stop-opacity="0.85"/>
+          <stop offset="45%" stop-color="#ffd875" stop-opacity="0.98"/>
+          <stop offset="70%" stop-color="#e5a93b" stop-opacity="0.9"/>
+          <stop offset="90%" stop-color="#9e782f" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#5a3a0e" stop-opacity="0"/>
+        </linearGradient>
 
-    <!-- 底部原版木刻金色波紋流線（橫向綿延版畫金線） -->
-    <div class="woodcut-gold-bottom-wrap" aria-hidden="true">
-      <img src="images/woodcut-motif-bottom-screen.png" alt="慢島劇團木刻金色水波版畫" class="woodcut-gold-bottom-img">
-    </div>
+        <linearGradient id="goldLeafRiver" x1="0%" y1="30%" x2="100%" y2="70%">
+          <stop offset="0%" stop-color="#ffd875" stop-opacity="0.95"/>
+          <stop offset="18%" stop-color="#f3c34e" stop-opacity="0.98"/>
+          <stop offset="35%" stop-color="#ffeaa7" stop-opacity="0.95"/>
+          <stop offset="60%" stop-color="#d4af37" stop-opacity="0.88"/>
+          <stop offset="82%" stop-color="#9e782f" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#543b0e" stop-opacity="0"/>
+        </linearGradient>
+
+        <linearGradient id="goldLeafAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffe899" stop-opacity="0.9"/>
+          <stop offset="50%" stop-color="#d4af37" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#704b12" stop-opacity="0.3"/>
+        </linearGradient>
+
+        <!-- 版畫刻刀深色凹槽托底陰影漸層 -->
+        <linearGradient id="woodcutShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#422908" stop-opacity="0.75"/>
+          <stop offset="50%" stop-color="#5a3a0e" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#1c1204" stop-opacity="0"/>
+        </linearGradient>
+
+        <!-- 大氣柔和金光微光 (純柔光無方塊) -->
+        <radialGradient id="theatricalGlowLeft" cx="12%" cy="78%" r="55%">
+          <stop offset="0%" stop-color="#d4af37" stop-opacity="0.15"/>
+          <stop offset="50%" stop-color="#8c6218" stop-opacity="0.04"/>
+          <stop offset="100%" stop-color="#0c0a08" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- 柔和金色大氣底暈 (完全平滑漸層，絕無方塊邊界) -->
+      <rect width="1440" height="600" fill="url(#theatricalGlowLeft)"/>
+
+      <!-- ==================== 第一組：左上方木刻扇紋金線群 (Top-Left Woodcut Fan Group) ==================== -->
+      <!-- 依據原稿精準追蹤之多道刀刻金線，起刀細、腹部厚實、尾端自然收尖 -->
+      <g id="woodcut-fan-motif">
+        <!-- 陰影托底層 (營造木刻凹凸浮雕立體層次) -->
+        <path d="M -10,85 C 65,95 140,118 215,165 C 275,202 315,248 335,295" stroke="url(#woodcutShadow)" stroke-width="4.0" stroke-linecap="round" opacity="0.6"/>
+        <path d="M -10,135 C 75,145 152,168 228,215 C 285,250 328,295 348,340" stroke="url(#woodcutShadow)" stroke-width="4.2" stroke-linecap="round" opacity="0.55"/>
+        <path d="M -10,185 C 85,192 165,212 240,258 C 298,292 342,342 362,385" stroke="url(#woodcutShadow)" stroke-width="4.5" stroke-linecap="round" opacity="0.5"/>
+
+        <!-- 主金線層 (金箔漸層，刻刀厚薄變化) -->
+        <path d="M -10,62 C 60,74 130,96 198,138 C 255,175 298,218 324,265" stroke="url(#goldLeafFan)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M -10,83 C 68,96 142,120 212,162 C 270,198 312,242 336,288" stroke="url(#goldLeafFan)" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <path d="M -10,101 C 75,112 152,138 224,182 C 282,218 322,260 346,305" stroke="url(#goldLeafFan)" stroke-width="3.0" stroke-linecap="round"/>
+        <path d="M -10,118 C 82,128 160,154 234,198 C 290,232 330,275 352,320" stroke="url(#goldLeafFan)" stroke-width="1.7" stroke-linecap="round" opacity="0.85"/>
+        <path d="M -10,135 C 90,144 170,170 245,215 C 300,248 338,290 360,336" stroke="url(#goldLeafFan)" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M -10,152 C 96,160 178,185 254,230 C 308,262 346,305 366,350" stroke="url(#goldLeafFan)" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+        <path d="M -10,168 C 104,174 188,200 264,245 C 316,278 354,320 374,366" stroke="url(#goldLeafFan)" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M -10,185 C 112,188 196,214 272,260 C 324,292 360,335 380,380" stroke="url(#goldLeafFan)" stroke-width="1.9" stroke-linecap="round" opacity="0.85"/>
+        <path d="M -10,202 C 120,202 206,228 282,274 C 332,308 368,350 386,396" stroke="url(#goldLeafFan)" stroke-width="3.0" stroke-linecap="round"/>
+        <path d="M -10,218 C 128,215 215,242 290,288 C 340,322 374,365 392,410" stroke="url(#goldLeafFan)" stroke-width="1.6" stroke-linecap="round" opacity="0.78"/>
+        <path d="M -10,235 C 135,228 224,255 300,302 C 348,335 380,378 398,424" stroke="url(#goldLeafFan)" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M -10,252 C 142,240 232,268 308,315 C 354,348 386,390 404,436" stroke="url(#goldLeafFan)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+
+        <!-- 扇紋間隔木刻刀雕短刻痕 (Woodcut Chisel Hatching Accents) -->
+        <path d="M 45,98 C 65,115 82,135 98,160" stroke="url(#goldLeafAccent)" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M 85,115 C 108,135 128,160 146,188" stroke="url(#goldLeafAccent)" stroke-width="2.0" stroke-linecap="round" opacity="0.7"/>
+        <path d="M 125,135 C 150,158 172,185 192,216" stroke="url(#goldLeafAccent)" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/>
+        <path d="M 165,155 C 192,180 216,210 238,244" stroke="url(#goldLeafAccent)" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
+        <path d="M 205,175 C 234,204 260,238 282,274" stroke="url(#goldLeafAccent)" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+      </g>
+
+      <!-- ==================== 第二組：下方S型流線與橫向綿延河浪 (Seamless Flowing River Waves) ==================== -->
+      <!-- 這一組線條自左下側揚起，以S型下探並無縫橫向綿延貫穿全站底層，絕無斷裂，高解析極致絲滑！ -->
+      <g id="woodcut-river-waves">
+        <!-- 陰影托底層 (立體木刻深雕層) -->
+        <path d="M -20,295 C 100,285 220,295 325,370 C 420,440 480,510 640,518 C 840,530 1080,485 1460,505" stroke="url(#woodcutShadow)" stroke-width="5.0" stroke-linecap="round" opacity="0.65"/>
+        <path d="M -20,345 C 110,325 235,325 345,395 C 435,460 495,525 660,532 C 860,544 1100,498 1460,518" stroke="url(#woodcutShadow)" stroke-width="4.8" stroke-linecap="round" opacity="0.6"/>
+        <path d="M -20,395 C 120,365 250,355 365,420 C 450,480 510,540 680,546 C 880,558 1120,512 1460,532" stroke="url(#woodcutShadow)" stroke-width="4.5" stroke-linecap="round" opacity="0.55"/>
+
+        <!-- 主金色木刻流線層 (綿延河浪，自然起伏) -->
+        <path d="M -20,285 C 100,272 216,288 320,365 C 418,435 475,505 635,512 C 835,524 1075,480 1460,500" stroke="url(#goldLeafRiver)" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M -20,305 C 105,290 224,302 330,378 C 425,446 482,512 645,518 C 845,530 1085,486 1460,506" stroke="url(#goldLeafRiver)" stroke-width="1.8" stroke-linecap="round" opacity="0.82"/>
+        <path d="M -20,325 C 110,308 232,316 340,390 C 432,456 490,518 655,524 C 855,536 1095,492 1460,512" stroke="url(#goldLeafRiver)" stroke-width="3.8" stroke-linecap="round"/>
+        <path d="M -20,345 C 115,325 240,330 350,402 C 440,466 498,524 665,530 C 865,542 1105,498 1460,518" stroke="url(#goldLeafRiver)" stroke-width="2.0" stroke-linecap="round" opacity="0.85"/>
+        <path d="M -20,365 C 120,342 248,345 360,415 C 448,476 505,530 675,536 C 875,548 1115,504 1460,524" stroke="url(#goldLeafRiver)" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M -20,385 C 125,360 256,360 370,428 C 455,486 512,536 685,542 C 885,554 1125,510 1460,530" stroke="url(#goldLeafRiver)" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+        <path d="M -20,405 C 130,378 264,375 380,440 C 462,496 520,542 695,548 C 895,560 1135,516 1460,536" stroke="url(#goldLeafRiver)" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M -20,425 C 135,395 272,390 390,452 C 470,506 528,548 705,554 C 905,566 1145,522 1460,542" stroke="url(#goldLeafRiver)" stroke-width="1.6" stroke-linecap="round" opacity="0.78"/>
+        <path d="M -20,445 C 140,412 280,405 400,465 C 478,516 535,554 715,560 C 915,572 1155,528 1460,548" stroke="url(#goldLeafRiver)" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M -20,465 C 145,430 288,420 410,478 C 485,526 542,560 725,566 C 925,578 1165,534 1460,554" stroke="url(#goldLeafRiver)" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
+        <path d="M -20,485 C 150,448 296,435 420,490 C 492,536 550,566 735,572 C 935,584 1175,540 1460,560" stroke="url(#goldLeafRiver)" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M -20,505 C 155,465 304,450 430,502 C 500,546 558,572 745,578 C 945,590 1185,546 1460,566" stroke="url(#goldLeafRiver)" stroke-width="1.3" stroke-linecap="round" opacity="0.7"/>
+      </g>
+    </svg>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
@@ -1505,10 +1595,26 @@
 
   <!-- ==================== 頁尾 Footer（暗底配原版木刻金色版畫） ==================== -->
   <footer class="relative overflow-hidden py-14 text-xs bg-[#0c0a08] text-stone-300 border-t border-[#d4af37]/30">
-    <!-- 頁尾頂端原版木刻金色波紋流線 -->
-    <div class="woodcut-gold-footer-wrap" aria-hidden="true">
-      <img src="images/woodcut-motif-bottom-screen.png" alt="頁尾木刻金色波紋" class="woodcut-gold-footer-img">
-    </div>
+    <!-- 頁尾頂端東南亞木刻金色波紋 (Pure Vector Authentic Woodcut Gold Waves) -->
+    <svg class="absolute top-0 left-0 right-0 w-full h-16 pointer-events-none select-none z-0" viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="footerWoodcutGold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7c5318" stop-opacity="0.4"/>
+          <stop offset="25%" stop-color="#ffd875" stop-opacity="0.9"/>
+          <stop offset="50%" stop-color="#f3c34e" stop-opacity="0.95"/>
+          <stop offset="75%" stop-color="#d4af37" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#5a3a0e" stop-opacity="0.3"/>
+        </linearGradient>
+      </defs>
+      <!-- 陰影托底層 -->
+      <path d="M -20,16 C 240,42 520,14 800,38 C 1100,16 1300,32 1480,32" stroke="#422908" stroke-width="4.0" stroke-linecap="round" opacity="0.6"/>
+      <path d="M -20,28 C 280,54 550,28 824,47 C 1120,29 1316,40 1480,40" stroke="#422908" stroke-width="3.5" stroke-linecap="round" opacity="0.5"/>
+      <!-- 金線層 -->
+      <path d="M -20,12 C 240,38 520,10 800,34 C 1100,12 1300,28 1480,28" stroke="url(#footerWoodcutGold)" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M -20,20 C 260,45 535,18 812,40 C 1110,20 1308,34 1480,34" stroke="url(#footerWoodcutGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+      <path d="M -20,28 C 280,52 550,26 824,45 C 1120,26 1316,38 1480,38" stroke="url(#footerWoodcutGold)" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M -20,36 C 300,58 565,34 836,50 C 1130,32 1324,42 1480,42" stroke="url(#footerWoodcutGold)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+    </svg>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
