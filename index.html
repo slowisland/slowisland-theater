@@ -78,7 +78,7 @@
   </script>
 
   <!-- 自定義與增強樣式 -->
-  <link rel="stylesheet" href="css/style.css?v=20260915_v46">
+  <link rel="stylesheet" href="css/style.css?v=20260915_v47">
 </head>
 <body class="bg-linen text-ink antialiased">
 
@@ -442,19 +442,24 @@
               </p>
             </div>
 
-            <!-- 完整演職員表與製作陣容 -->
+            <!-- 完整演職員表與製作陣容（抽屜折疊式封箱） -->
             <div class="mt-6 p-5 rounded-2xl bg-linen border border-[#dfcfb2] text-xs space-y-3.5 shadow-sm">
               <div class="flex items-center justify-between pb-2.5 border-b border-[#dfcfb2]">
                 <span class="font-bold text-[#8c1d1d] flex items-center gap-1.5 uppercase tracking-wider text-xs sm:text-sm">
                   <svg class="w-4 h-4 text-[#8c1d1d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  完整演職員表與製作陣容
+                  演職員表與製作陣容
                 </span>
-                <span class="text-[11px] text-stone-500 font-medium">歷年三十餘位跨界主創精湛呈現</span>
+                <span class="text-[11px] text-stone-500 font-medium">歷年三十餘位跨界主創</span>
               </div>
 
-              <div class="space-y-2.5 leading-relaxed text-stone-800 text-[11px] sm:text-xs">
+              <!-- 預設常駐：核心主創與演員 -->
+              <div class="space-y-2 leading-relaxed text-stone-800 text-[11px] sm:text-xs">
                 <div><strong class="text-[#8c1d1d]">核心創作｜</strong>編劇暨導演：姜富琴 ／ 製作人：林欣怡 ／ 執行製作：莊博旭 ／ 行銷宣傳：田珈伃（泰國華人移民二代） ／ 導演助理：高子鈞</div>
                 <div><strong class="text-[#8c1d1d]">主要演出者｜</strong>李明哲、王珂瑤（緬甸華人移民二代）、張昌緬（緬甸華人移民二代）、鍾得凡、王言煥、楊奇殷、張櫂均、江芷蓉；特別演出：田珈伃</div>
+              </div>
+
+              <!-- 折疊抽屜：設計、技術、影音、顧問完整名單 (點擊展開) -->
+              <div id="featured-credits-drawer" class="hidden pt-2.5 border-t border-[#dfcfb2]/60 space-y-2.5 leading-relaxed text-stone-800 text-[11px] sm:text-xs transition-all duration-300">
                 <div><strong class="text-[#8c1d1d]">視覺與設計團隊｜</strong>舞台設計：林仕倫 ／ 舞台製作公司：山峸製作設計 ／ 燈光設計：歐衍穀 ／ 服裝設計：彭郁勻 ／ 音樂設計：申承羲 ／ 影像設計：吳俊輝、葉澈 ／ 主視覺設計：歐陽文慧 ／ 劇名標準字設計：陳慧瑜</div>
                 <div><strong class="text-[#8c1d1d]">技術與製作執行｜</strong>舞台監督：王宣文 ／ 舞台技術指導：劉柏言 ／ 舞台技術人員：傅子峻、葉岫穎、連威豪、陳冠廷 ／ 燈光技術指導：王信偉 ／ 燈光技術人員：劉凱民、高德宇 ／ 影像技術指導：余竑賢、蕭如君 ／ 音響：焦點音樂、余忠皓、黃致誠、簡睿均 ／ 梳化、服管：呂姿瑩、孫小婷 ／ 劇團行政：邱子謙 ／ 前台執行：劉芸倩 ／ 社群編輯：羅靖茹</div>
                 <div><strong class="text-[#8c1d1d]">劇照與影音紀錄｜</strong>劇照攝影：唐健哲、林育全 ／ 演出錄影：尕華城文化實驗室、陳小樺、梁紹文、欒誠偉</div>
@@ -463,6 +468,13 @@
                   <div><strong class="text-[#8c1d1d]">【聲音演出】</strong>緬文：張蘭芳女士、王子杰；中文：江謝保、彭云緹、曾歆雁、曾紫庭</div>
                   <div><strong class="text-[#8c1d1d]">【雲南話顧問】</strong>楊文聰、彭積美、張彩蓉、李忠杰、王志珠、陳新順</div>
                 </div>
+              </div>
+
+              <!-- 折疊切換按鈕 -->
+              <div class="pt-1 text-center">
+                <button type="button" id="featured-credits-toggle-btn" onclick="toggleFeaturedCredits()" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#8c1d1d] hover:text-[#d96523] transition-colors cursor-pointer py-1.5 px-3 rounded-xl hover:bg-white/80 border border-transparent hover:border-[#dfcfb2]">
+                  <span id="featured-credits-toggle-text">查看完整演職員與技術團隊名單（30餘位）▾</span>
+                </button>
               </div>
             </div>
 
@@ -510,133 +522,141 @@
                     <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“這部作品如同一鍋反覆熬煮的湯，每一次重演與修訂，都是將記憶重新撈起，讓那些尚未說完的故事逐漸沉澱、成形。”</p>
                   </div>
 
-                  <!-- 03 經濟日報 -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">經濟日報</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">媒體特寫報導</span>
+                  <!-- 封箱折疊抽屜：其餘 8 篇深度劇評報導（點擊展開） -->
+                  <div id="featured-reviews-drawer" class="hidden space-y-2.5 transition-all duration-300">
+                    <!-- 03 經濟日報 -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">經濟日報</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">媒體特寫報導</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026.02 · 文化藝文焦點</span>
                       </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026.02 · 文化藝文焦點</span>
+                      <a href="https://money.udn.com/money/story/122328/9490742" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>橫跨四國、三代人生命溯源 慢島劇團《南薑 香茅 罌粟花》上演</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“橫跨中、緬、泰、台四國邊境，跨越三代人的生命溯源史詩，以料理香氣與家族記憶重構當代舞台。”</p>
                     </div>
-                    <a href="https://money.udn.com/money/story/122328/9490742" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>橫跨四國、三代人生命溯源 慢島劇團《南薑 香茅 罌粟花》上演</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“橫跨中、緬、泰、台四國邊境，跨越三代人的生命溯源史詩，以料理香氣與家族記憶重構當代舞台。”</p>
+
+                    <!-- 04 ShoppingDesign -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">ShoppingDesign 設計採買誌</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">設計美學特寫</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026 · 編輯部推薦</span>
+                      </div>
+                      <a href="https://www.shoppingdesign.com.tw/post/view/13089?" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>2026 桃園鐵玫瑰藝術節焦點：從劇場、空間田調，探索藝術如何形塑時間</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“深入解析慢島劇團《南薑．香茅．罌粟花》如何以料理香氣與物件劇場，跨越四國三代人的遷徙歷程。”</p>
+                    </div>
+
+                    <!-- 05 PAR 表演藝術雜誌 -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">PAR 表演藝術雜誌</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">排練特寫與評論</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026.04 · 文 / 蕭文華</span>
+                      </div>
+                      <a href="https://par.npac-ntch.org/tw/article/doc/HHSTPDT67C" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>《南薑．香茅．罌粟花》 溫柔訴說被掩蓋的故事</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“從味覺記憶出發，溫柔訴說被掩蓋的故事。記錄排練現場與慢島劇團如何藉由料理氣味喚起被主流歷史遮蔽的常民生命記憶。”</p>
+                    </div>
+
+                    <!-- 06 Marie Claire 美麗佳人 -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">Marie Claire 美麗佳人</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">年度必看演出推薦</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026.01 · 美麗佳人編輯部</span>
+                      </div>
+                      <a href="https://www.marieclaire.com.tw/lifestyle/art/91258" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>2026上半年表演藝術攻略｜全臺「五大藝術節＆10檔演出」推薦</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“「獻給想理解我們從何而來的你。」藉由追尋父親味道的旅程，踏上一條橫跨雲南、緬甸、泰國到臺灣的華人移民史。”</p>
+                    </div>
+
+                    <!-- 07 聯合新聞網 (藝術節15周年) -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">聯合新聞網</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">藝術節專題報導</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026.01 · 生活文化版</span>
+                      </div>
+                      <a href="https://udn.com/news/story/7324/9277151" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>多國劇團齊聚！鐵玫瑰藝術節15周年 探索多元文化</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“鐵玫瑰藝術節15周年焦點節目報導，聚焦慢島劇團深刻的田調力量，探索多元族群文化與歷史記憶。”</p>
+                    </div>
+
+                    <!-- 08 青年日報 -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">青年日報</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">藝術文化焦點</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026.01 · 記者李采蓉報導</span>
+                      </div>
+                      <a href="https://www.ydn.com.tw/news/newsInsidePage?chapterID=1836778" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>第15屆桃園鐵玫瑰藝術節 慢島劇團《南薑．香茅．罌粟花》亮點呈現</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“青年日報專題報導，推介本劇如何透過精湛演出讓年輕世代看見台灣多元土地記憶。”</p>
+                    </div>
+
+                    <!-- 09 兩廳院 OPENTIX 專題報導 -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">兩廳院 OPENTIX 專題</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">策展亮點直擊</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026.03 · 策展人筆記</span>
+                      </div>
+                      <a href="https://www.opentix.life/event/1879075306637373441" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>《南薑．香茅．罌粟花》在香料蒸騰中重組家的拼圖</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“兩廳院官方售票平台專題直擊，精闢剖析舞台設計與料理劇場如何完美交融。”</p>
+                    </div>
+
+                    <!-- 10 台新藝術基金會 ARTalks 深度專訪 -->
+                    <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
+                      <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">台新藝術基金會 ARTalks</span>
+                          <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">主創編導深度專訪</span>
+                        </div>
+                        <span class="text-[11px] text-stone-500 font-mono">2026 · ARTalks 專訪</span>
+                      </div>
+                      <a href="https://talks.taishinart.org.tw/members/735/40018" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
+                        <span>歷史的縫隙與個體的歸途——編導姜富琴《南薑．香茅．罌粟花》的十年拓墾</span>
+                        <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
+                      </a>
+                      <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“深度專訪編導姜富琴，剖析十年創作拓墾歷程，如何由家族食譜出發，在歷史的巨大縫隙中為無名流離者尋找個體的歸途。”</p>
+                    </div>
                   </div>
 
-                  <!-- 04 ShoppingDesign -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">ShoppingDesign 設計採買誌</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">設計美學特寫</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026 · 編輯部推薦</span>
-                    </div>
-                    <a href="https://www.shoppingdesign.com.tw/post/view/13089?" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>2026 桃園鐵玫瑰藝術節焦點：從劇場、空間田調，探索藝術如何形塑時間</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“深入解析慢島劇團《南薑．香茅．罌粟花》如何以料理香氣與物件劇場，跨越四國三代人的遷徙歷程。”</p>
-                  </div>
-
-                  <!-- 05 PAR 表演藝術雜誌 -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">PAR 表演藝術雜誌</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">排練特寫與評論</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026.04 · 文 / 蕭文華</span>
-                    </div>
-                    <a href="https://par.npac-ntch.org/tw/article/doc/HHSTPDT67C" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>《南薑．香茅．罌粟花》 溫柔訴說被掩蓋的故事</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“從味覺記憶出發，溫柔訴說被掩蓋的故事。記錄排練現場與慢島劇團如何藉由料理氣味喚起被主流歷史遮蔽的常民生命記憶。”</p>
-                  </div>
-
-                  <!-- 06 Marie Claire 美麗佳人 -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">Marie Claire 美麗佳人</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">年度必看演出推薦</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026.01 · 美麗佳人編輯部</span>
-                    </div>
-                    <a href="https://www.marieclaire.com.tw/lifestyle/art/91258" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>2026上半年表演藝術攻略｜全臺「五大藝術節＆10檔演出」推薦</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“「獻給想理解我們從何而來的你。」藉由追尋父親味道的旅程，踏上一條橫跨雲南、緬甸、泰國到臺灣的華人移民史。”</p>
-                  </div>
-
-                  <!-- 07 聯合新聞網 (藝術節15周年) -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">聯合新聞網</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">藝術節專題報導</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026.01 · 生活文化版</span>
-                    </div>
-                    <a href="https://udn.com/news/story/7324/9277151" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>多國劇團齊聚！鐵玫瑰藝術節15周年 探索多元文化</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“鐵玫瑰藝術節15周年焦點節目報導，聚焦慢島劇團深刻的田調力量，探索多元族群文化與歷史記憶。”</p>
-                  </div>
-
-                  <!-- 08 鐵玫瑰藝術節專題焦點 -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">鐵玫瑰藝術節專題焦點</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">藝術節精選節目</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026 · 官方社群特寫</span>
-                    </div>
-                    <a href="https://reurl.cc/O6exn3" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>慢島劇團《南薑．香茅．罌粟花》鐵玫瑰藝術節專題推薦</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“慢島劇團年度重點大戲，融合現場料理香氣與滇緬移民深刻田調，引領觀眾走進歷史與常民生命現場。”</p>
-                  </div>
-
-                  <!-- 09 聯合新聞網 (四國三代人) -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">聯合新聞網</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">媒體特寫報導</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026.02 · 文化藝文焦點</span>
-                    </div>
-                    <a href="https://udn.com/news/story/7266/9490742" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>橫跨四國、三代人生命溯源 慢島劇團《南薑 香茅 罌粟花》上演</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“橫跨中、緬、泰、台四國邊境，跨越三代人的生命溯源史詩，以料理香氣與家族記憶重構當代舞台。”</p>
-                  </div>
-
-                  <!-- 10 台新藝術基金會 ARTalks -->
-                  <div class="p-3 bg-white rounded-xl border border-[#e6dfd3] hover:border-[#8c1d1d]/50 hover:shadow transition-all">
-                    <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
-                      <div class="flex items-center gap-1.5">
-                        <span class="bg-[#8c1d1d]/10 text-[#8c1d1d] font-bold text-[10px] px-2 py-0.5 rounded">台新藝術基金會 ARTalks</span>
-                        <span class="bg-[#d96523]/10 text-[#d96523] font-semibold text-[10px] px-1.5 py-0.5 rounded">主創編導深度專訪</span>
-                      </div>
-                      <span class="text-[11px] text-stone-500 font-mono">2026 · ARTalks 專訪</span>
-                    </div>
-                    <a href="https://talks.taishinart.org.tw/members/735/40018" target="_blank" rel="noopener noreferrer" class="font-serif text-sm font-bold text-[#23150f] hover:text-[#8c1d1d] hover:underline flex items-start justify-between gap-2">
-                      <span>歷史的縫隙與個體的歸途——編導姜富琴《南薑．香茅．罌粟花》的十年拓墾</span>
-                      <span class="text-xs text-[#8c1d1d] font-sans font-semibold shrink-0">閱讀全文 ↗</span>
-                    </a>
-                    <p class="text-xs text-stone-600 italic mt-1 bg-[#fcf8f2] px-2.5 py-1.5 rounded border-l-2 border-[#d96523]">“深度專訪編導姜富琴，剖析十年創作拓墾歷程，如何由家族食譜出發，在歷史的巨大縫隙中為無名流離者尋找個體的歸途。”</p>
-                  </div>
+                  <!-- 展開/收合其餘劇評按鈕 -->
+                  <button type="button" id="featured-reviews-toggle-btn" onclick="toggleFeaturedReviews()" class="w-full mt-3 py-2.5 px-4 rounded-xl bg-white hover:bg-[#8c1d1d] text-[#8c1d1d] hover:text-white border border-[#ebdcca] hover:border-[#8c1d1d] text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group">
+                    <span id="featured-reviews-toggle-text">📰 展開其餘 8 篇專文劇評與媒體報導 ▾</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1082,6 +1102,15 @@
       <!-- 劇目卡片網格 (由 main.js 動態渲染) -->
       <div id="repertoire-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- JS 動態插入劇目卡片 -->
+      </div>
+
+      <!-- 封箱展開控制器（方案 B 封箱式展開探索其餘 13 檔劇作） -->
+      <div id="repertoire-toggle-container" class="mt-12 text-center">
+        <button type="button" id="repertoire-toggle-btn" onclick="toggleRepertoireExpansion()" class="px-8 py-4 rounded-2xl bg-white hover:bg-[#8c1d1d] text-[#8c1d1d] hover:text-white border-2 border-[#8c1d1d]/30 hover:border-[#8c1d1d] font-serif font-bold text-sm sm:text-base shadow-md hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2.5 cursor-pointer group">
+          <span id="repertoire-toggle-icon" class="text-base group-hover:translate-y-0.5 transition-transform duration-300">▾</span>
+          <span id="repertoire-toggle-text">展開探索其餘 13 檔原創劇目（2008–2026）</span>
+          <span class="text-xs opacity-75 font-sans font-light">/ Explore All 17 Shows</span>
+        </button>
       </div>
 
     </div>
@@ -1770,6 +1799,6 @@
 
 
   <!-- 載入主程式邏輯 -->
-  <script src="js/main.js?v=20260915_v46"></script>
+  <script src="js/main.js?v=20260915_v47"></script>
 </body>
 </html>
