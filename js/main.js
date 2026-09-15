@@ -19,7 +19,7 @@ const productions = [
       "images/唐健哲攝影02023拷貝.jpg",
       "images/唐健哲攝影02979拷貝.jpg",
       "images/唐健哲攝影03271拷貝.jpg",
-      "images/_唐健哲攝影9506拷貝.jpg",
+      "images/唐健哲攝影9506拷貝.jpg",
       "images/南薑香茅罌粟花_主視覺.jpg",
       "images/南薑2016劇照/南薑2016劇照01.jpg",
       "images/南薑2016劇照/南薑2016劇照02.jpg",
@@ -4009,13 +4009,13 @@ window.initMediaVideoFilters = initMediaVideoFilters;
 const stageBackdropOptions = [
   {
     name: "天使村",
-    desc: "天使村共饗、熱氣與生活煙火氣",
+    desc: "那些邊境山村的故事",
     src: "images/唐健哲攝影02023拷貝.jpg"
   },
   {
     name: "大舞台全景光影",
     desc: "磅礴舞台燈光與空間張力",
-    src: "images/_唐健哲攝影9506拷貝.jpg"
+    src: "images/唐健哲攝影9506拷貝.jpg"
   },
   {
     name: "楊定國之夢",
@@ -4023,7 +4023,7 @@ const stageBackdropOptions = [
     src: "images/唐健哲攝影02979拷貝.jpg"
   },
   {
-    name: "香茅炊煙特寫",
+    name: "移居的人們",
     desc: "南薑香茅鍋釜與舞台炊煙",
     src: "images/唐健哲攝影03271拷貝.jpg"
   }
