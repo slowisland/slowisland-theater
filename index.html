@@ -78,7 +78,7 @@
   </script>
 
   <!-- 自定義與增強樣式 -->
-  <link rel="stylesheet" href="css/style.css?v=20260915_v39">
+  <link rel="stylesheet" href="css/style.css?v=20260915_v40">
 </head>
 <body class="bg-linen text-ink antialiased">
 
@@ -226,103 +226,126 @@
 
   <!-- ==================== 英雄首頁 Hero Section（暗底配原版木刻金色版畫 Theatrical Obsidian & Authentic Woodcut Gold） ==================== -->
   <section class="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 text-white theatrical-dark-gold-hero">
-    <!-- ==================== 東南亞質樸木刻金色版畫向量圖騰 (Authentic Southeast Asian Woodcut Gold Relief) ==================== -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- ==================== 東南亞質樸木刻金色版畫向量圖騰（純手刻浮雕流線，無方塊色差，全幅綿延） ==================== -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden" viewBox="0 0 1440 640" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <!-- 核心金箔漸層定義 -->
-        <linearGradient id="goldLeafFan" x1="0%" y1="100%" x2="60%" y2="0%">
-          <stop offset="0%" stop-color="#784e12" stop-opacity="0.4"/>
-          <stop offset="20%" stop-color="#b8860b" stop-opacity="0.85"/>
-          <stop offset="45%" stop-color="#ffd875" stop-opacity="0.98"/>
-          <stop offset="70%" stop-color="#e5a93b" stop-opacity="0.9"/>
-          <stop offset="90%" stop-color="#9e782f" stop-opacity="0.5"/>
-          <stop offset="100%" stop-color="#5a3a0e" stop-opacity="0"/>
+        <linearGradient id="wcGoldMain" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#805615"/>
+          <stop offset="15%" stop-color="#c99a2c"/>
+          <stop offset="35%" stop-color="#ffd875"/>
+          <stop offset="55%" stop-color="#fff1ba"/>
+          <stop offset="75%" stop-color="#f3c34e"/>
+          <stop offset="90%" stop-color="#d4af37"/>
+          <stop offset="100%" stop-color="#784e12"/>
         </linearGradient>
 
-        <linearGradient id="goldLeafRiver" x1="0%" y1="30%" x2="100%" y2="70%">
-          <stop offset="0%" stop-color="#ffd875" stop-opacity="0.95"/>
-          <stop offset="18%" stop-color="#f3c34e" stop-opacity="0.98"/>
-          <stop offset="35%" stop-color="#ffeaa7" stop-opacity="0.95"/>
-          <stop offset="60%" stop-color="#d4af37" stop-opacity="0.88"/>
-          <stop offset="82%" stop-color="#9e782f" stop-opacity="0.6"/>
-          <stop offset="100%" stop-color="#543b0e" stop-opacity="0"/>
+        <linearGradient id="wcGoldRiver" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffd875"/>
+          <stop offset="20%" stop-color="#ffeaa7"/>
+          <stop offset="40%" stop-color="#f5c34e"/>
+          <stop offset="65%" stop-color="#ffd875"/>
+          <stop offset="85%" stop-color="#d4af37"/>
+          <stop offset="100%" stop-color="#855716"/>
         </linearGradient>
 
-        <linearGradient id="goldLeafAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ffe899" stop-opacity="0.9"/>
-          <stop offset="50%" stop-color="#d4af37" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#704b12" stop-opacity="0.3"/>
+        <linearGradient id="wcGoldHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="30%" stop-color="#fff4cc" stop-opacity="0.98"/>
+          <stop offset="70%" stop-color="#ffd875" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#f3c34e" stop-opacity="0.8"/>
         </linearGradient>
 
-        <!-- 版畫刻刀深色凹槽托底陰影漸層 -->
-        <linearGradient id="woodcutShadow" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#422908" stop-opacity="0.75"/>
-          <stop offset="50%" stop-color="#5a3a0e" stop-opacity="0.6"/>
-          <stop offset="100%" stop-color="#1c1204" stop-opacity="0"/>
+        <!-- 木刻陰影深色溝槽 (營造版畫刻痕立體浮雕感) -->
+        <linearGradient id="wcGougeShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#2e1a05" stop-opacity="0.85"/>
+          <stop offset="50%" stop-color="#422908" stop-opacity="0.75"/>
+          <stop offset="100%" stop-color="#140b02" stop-opacity="0.2"/>
         </linearGradient>
 
-        <!-- 大氣柔和金光微光 (純柔光無方塊) -->
-        <radialGradient id="theatricalGlowLeft" cx="12%" cy="78%" r="55%">
-          <stop offset="0%" stop-color="#d4af37" stop-opacity="0.15"/>
-          <stop offset="50%" stop-color="#8c6218" stop-opacity="0.04"/>
+        <!-- 背景大氣微光 (純平滑徑向漸層，無任何色塊分界) -->
+        <radialGradient id="theatricalAmbientGlow" cx="18%" cy="75%" r="60%">
+          <stop offset="0%" stop-color="#d4af37" stop-opacity="0.22"/>
+          <stop offset="45%" stop-color="#8c6218" stop-opacity="0.06"/>
+          <stop offset="100%" stop-color="#0c0a08" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="theatricalRiverGlow" cx="60%" cy="85%" r="50%">
+          <stop offset="0%" stop-color="#ffd875" stop-opacity="0.14"/>
+          <stop offset="60%" stop-color="#9e782f" stop-opacity="0.03"/>
           <stop offset="100%" stop-color="#0c0a08" stop-opacity="0"/>
         </radialGradient>
       </defs>
 
-      <!-- 柔和金色大氣底暈 (完全平滑漸層，絕無方塊邊界) -->
-      <rect width="1440" height="600" fill="url(#theatricalGlowLeft)"/>
+      <!-- 純平滑大氣微光底層 (絕無色塊邊界) -->
+      <rect width="1440" height="640" fill="url(#theatricalAmbientGlow)"/>
+      <rect width="1440" height="640" fill="url(#theatricalRiverGlow)"/>
 
-      <!-- ==================== 第一組：左上方木刻扇紋金線群 (Top-Left Woodcut Fan Group) ==================== -->
-      <!-- 依據原稿精準追蹤之多道刀刻金線，起刀細、腹部厚實、尾端自然收尖 -->
-      <g id="woodcut-fan-motif">
-        <!-- 陰影托底層 (營造木刻凹凸浮雕立體層次) -->
-        <path d="M -10,85 C 65,95 140,118 215,165 C 275,202 315,248 335,295" stroke="url(#woodcutShadow)" stroke-width="4.0" stroke-linecap="round" opacity="0.6"/>
-        <path d="M -10,135 C 75,145 152,168 228,215 C 285,250 328,295 348,340" stroke="url(#woodcutShadow)" stroke-width="4.2" stroke-linecap="round" opacity="0.55"/>
-        <path d="M -10,185 C 85,192 165,212 240,258 C 298,292 342,342 362,385" stroke="url(#woodcutShadow)" stroke-width="4.5" stroke-linecap="round" opacity="0.5"/>
+      <!-- ==================== 第一層：深色刻刀陰影層 (Chisel Shadow Relief) ==================== -->
+      <g id="wc-shadow-layer">
+        <!-- 左側扇紋陰影 -->
+        <path d="M -30,60 C 60,68 150,92 225,135 C 285,172 328,218 355,270" stroke="url(#wcGougeShadow)" stroke-width="7.5" stroke-linecap="round"/>
+        <path d="M -30,110 C 76,116 174,142 255,188 C 315,224 356,270 384,320" stroke="url(#wcGougeShadow)" stroke-width="8.0" stroke-linecap="round"/>
+        <path d="M -30,160 C 92,164 198,190 285,238 C 344,272 384,320 412,370" stroke="url(#wcGougeShadow)" stroke-width="8.5" stroke-linecap="round"/>
+        <path d="M -30,210 C 108,212 222,238 315,286 C 372,320 412,370 438,420" stroke="url(#wcGougeShadow)" stroke-width="8.0" stroke-linecap="round"/>
 
-        <!-- 主金線層 (金箔漸層，刻刀厚薄變化) -->
-        <path d="M -10,62 C 60,74 130,96 198,138 C 255,175 298,218 324,265" stroke="url(#goldLeafFan)" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M -10,83 C 68,96 142,120 212,162 C 270,198 312,242 336,288" stroke="url(#goldLeafFan)" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
-        <path d="M -10,101 C 75,112 152,138 224,182 C 282,218 322,260 346,305" stroke="url(#goldLeafFan)" stroke-width="3.0" stroke-linecap="round"/>
-        <path d="M -10,118 C 82,128 160,154 234,198 C 290,232 330,275 352,320" stroke="url(#goldLeafFan)" stroke-width="1.7" stroke-linecap="round" opacity="0.85"/>
-        <path d="M -10,135 C 90,144 170,170 245,215 C 300,248 338,290 360,336" stroke="url(#goldLeafFan)" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M -10,152 C 96,160 178,185 254,230 C 308,262 346,305 366,350" stroke="url(#goldLeafFan)" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
-        <path d="M -10,168 C 104,174 188,200 264,245 C 316,278 354,320 374,366" stroke="url(#goldLeafFan)" stroke-width="3.4" stroke-linecap="round"/>
-        <path d="M -10,185 C 112,188 196,214 272,260 C 324,292 360,335 380,380" stroke="url(#goldLeafFan)" stroke-width="1.9" stroke-linecap="round" opacity="0.85"/>
-        <path d="M -10,202 C 120,202 206,228 282,274 C 332,308 368,350 386,396" stroke="url(#goldLeafFan)" stroke-width="3.0" stroke-linecap="round"/>
-        <path d="M -10,218 C 128,215 215,242 290,288 C 340,322 374,365 392,410" stroke="url(#goldLeafFan)" stroke-width="1.6" stroke-linecap="round" opacity="0.78"/>
-        <path d="M -10,235 C 135,228 224,255 300,302 C 348,335 380,378 398,424" stroke="url(#goldLeafFan)" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M -10,252 C 142,240 232,268 308,315 C 354,348 386,390 404,436" stroke="url(#goldLeafFan)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
-
-        <!-- 扇紋間隔木刻刀雕短刻痕 (Woodcut Chisel Hatching Accents) -->
-        <path d="M 45,98 C 65,115 82,135 98,160" stroke="url(#goldLeafAccent)" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <path d="M 85,115 C 108,135 128,160 146,188" stroke="url(#goldLeafAccent)" stroke-width="2.0" stroke-linecap="round" opacity="0.7"/>
-        <path d="M 125,135 C 150,158 172,185 192,216" stroke="url(#goldLeafAccent)" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/>
-        <path d="M 165,155 C 192,180 216,210 238,244" stroke="url(#goldLeafAccent)" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
-        <path d="M 205,175 C 234,204 260,238 282,274" stroke="url(#goldLeafAccent)" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+        <!-- 中央奔騰S型流線陰影（掠過2008/15+/百數場後方與下方，加強立體感） -->
+        <path d="M -30,260 C 80,250 200,270 310,345 C 410,415 480,480 620,490 C 820,505 1060,460 1470,480" stroke="url(#wcGougeShadow)" stroke-width="9.0" stroke-linecap="round"/>
+        <path d="M -30,310 C 100,295 230,310 340,390 C 438,460 505,505 650,514 C 855,528 1092,484 1470,504" stroke="url(#wcGougeShadow)" stroke-width="9.5" stroke-linecap="round"/>
+        <path d="M -30,360 C 120,340 260,350 370,435 C 466,504 530,530 680,538 C 890,552 1125,508 1470,528" stroke="url(#wcGougeShadow)" stroke-width="9.0" stroke-linecap="round"/>
+        <path d="M -30,410 C 140,385 290,390 400,478 C 494,545 555,555 710,562 C 925,576 1158,532 1470,552" stroke="url(#wcGougeShadow)" stroke-width="8.5" stroke-linecap="round"/>
+        <path d="M -30,460 C 160,430 320,430 430,520 C 522,585 580,580 740,586 C 960,600 1192,556 1470,576" stroke="url(#wcGougeShadow)" stroke-width="8.0" stroke-linecap="round"/>
       </g>
 
-      <!-- ==================== 第二組：下方S型流線與橫向綿延河浪 (Seamless Flowing River Waves) ==================== -->
-      <!-- 這一組線條自左下側揚起，以S型下探並無縫橫向綿延貫穿全站底層，絕無斷裂，高解析極致絲滑！ -->
-      <g id="woodcut-river-waves">
-        <!-- 陰影托底層 (立體木刻深雕層) -->
-        <path d="M -20,295 C 100,285 220,295 325,370 C 420,440 480,510 640,518 C 840,530 1080,485 1460,505" stroke="url(#woodcutShadow)" stroke-width="5.0" stroke-linecap="round" opacity="0.65"/>
-        <path d="M -20,345 C 110,325 235,325 345,395 C 435,460 495,525 660,532 C 860,544 1100,498 1460,518" stroke="url(#woodcutShadow)" stroke-width="4.8" stroke-linecap="round" opacity="0.6"/>
-        <path d="M -20,395 C 120,365 250,355 365,420 C 450,480 510,540 680,546 C 880,558 1120,512 1460,532" stroke="url(#woodcutShadow)" stroke-width="4.5" stroke-linecap="round" opacity="0.55"/>
+      <!-- ==================== 第二層：粗實金箔木刻主線條 (Bold Imperial Gold Body) ==================== -->
+      <g id="wc-gold-body">
+        <!-- 左側扇紋群組 (起伏大、金光燦爛) -->
+        <path d="M -30,60 C 60,68 150,92 225,135 C 285,172 328,218 355,270" stroke="url(#wcGoldMain)" stroke-width="4.2" stroke-linecap="round"/>
+        <path d="M -30,85 C 68,92 162,118 240,162 C 300,198 342,244 370,295" stroke="url(#wcGoldMain)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+        <path d="M -30,110 C 76,116 174,142 255,188 C 315,224 356,270 384,320" stroke="url(#wcGoldMain)" stroke-width="4.8" stroke-linecap="round"/>
+        <path d="M -30,135 C 84,140 186,166 270,212 C 330,248 370,295 398,345" stroke="url(#wcGoldMain)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
+        <path d="M -30,160 C 92,164 198,190 285,238 C 344,272 384,320 412,370" stroke="url(#wcGoldMain)" stroke-width="5.2" stroke-linecap="round"/>
+        <path d="M -30,185 C 100,188 210,214 300,262 C 358,296 398,345 425,395" stroke="url(#wcGoldMain)" stroke-width="2.8" stroke-linecap="round" opacity="0.9"/>
+        <path d="M -30,210 C 108,212 222,238 315,286 C 372,320 412,370 438,420" stroke="url(#wcGoldMain)" stroke-width="4.6" stroke-linecap="round"/>
+        <path d="M -30,235 C 116,236 234,262 330,310 C 386,344 425,395 450,445" stroke="url(#wcGoldMain)" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
 
-        <!-- 主金色木刻流線層 (綿延河浪，自然起伏) -->
-        <path d="M -20,285 C 100,272 216,288 320,365 C 418,435 475,505 635,512 C 835,524 1075,480 1460,500" stroke="url(#goldLeafRiver)" stroke-width="3.4" stroke-linecap="round"/>
-        <path d="M -20,305 C 105,290 224,302 330,378 C 425,446 482,512 645,518 C 845,530 1085,486 1460,506" stroke="url(#goldLeafRiver)" stroke-width="1.8" stroke-linecap="round" opacity="0.82"/>
-        <path d="M -20,325 C 110,308 232,316 340,390 C 432,456 490,518 655,524 C 855,536 1095,492 1460,512" stroke="url(#goldLeafRiver)" stroke-width="3.8" stroke-linecap="round"/>
-        <path d="M -20,345 C 115,325 240,330 350,402 C 440,466 498,524 665,530 C 865,542 1105,498 1460,518" stroke="url(#goldLeafRiver)" stroke-width="2.0" stroke-linecap="round" opacity="0.85"/>
-        <path d="M -20,365 C 120,342 248,345 360,415 C 448,476 505,530 675,536 C 875,548 1115,504 1460,524" stroke="url(#goldLeafRiver)" stroke-width="3.5" stroke-linecap="round"/>
-        <path d="M -20,385 C 125,360 256,360 370,428 C 455,486 512,536 685,542 C 885,554 1125,510 1460,530" stroke="url(#goldLeafRiver)" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
-        <path d="M -20,405 C 130,378 264,375 380,440 C 462,496 520,542 695,548 C 895,560 1135,516 1460,536" stroke="url(#goldLeafRiver)" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M -20,425 C 135,395 272,390 390,452 C 470,506 528,548 705,554 C 905,566 1145,522 1460,542" stroke="url(#goldLeafRiver)" stroke-width="1.6" stroke-linecap="round" opacity="0.78"/>
-        <path d="M -20,445 C 140,412 280,405 400,465 C 478,516 535,554 715,560 C 915,572 1155,528 1460,548" stroke="url(#goldLeafRiver)" stroke-width="2.8" stroke-linecap="round"/>
-        <path d="M -20,465 C 145,430 288,420 410,478 C 485,526 542,560 725,566 C 925,578 1165,534 1460,554" stroke="url(#goldLeafRiver)" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
-        <path d="M -20,485 C 150,448 296,435 420,490 C 492,536 550,566 735,572 C 935,584 1175,540 1460,560" stroke="url(#goldLeafRiver)" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M -20,505 C 155,465 304,450 430,502 C 500,546 558,572 745,578 C 945,590 1185,546 1460,566" stroke="url(#goldLeafRiver)" stroke-width="1.3" stroke-linecap="round" opacity="0.7"/>
+        <!-- 扇紋間隔木刻刀雕短排線 (Woodcut Relief Hatching Accents) -->
+        <path d="M 50,115 C 72,135 92,158 110,185" stroke="url(#wcGoldHighlight)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+        <path d="M 95,138 C 120,160 142,188 162,220" stroke="url(#wcGoldHighlight)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
+        <path d="M 140,160 C 168,185 194,218 216,252" stroke="url(#wcGoldHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+        <path d="M 185,182 C 215,210 242,245 266,282" stroke="url(#wcGoldHighlight)" stroke-width="2.8" stroke-linecap="round" opacity="0.9"/>
+        <path d="M 230,205 C 262,236 290,272 314,312" stroke="url(#wcGoldHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+
+        <!-- 中央奔騰S型流線（大氣飽滿，掠過2008/15+/百數場後方與下方，加強版） -->
+        <path d="M -30,260 C 80,250 200,270 310,345 C 410,415 480,480 620,490 C 820,505 1060,460 1470,480" stroke="url(#wcGoldRiver)" stroke-width="4.6" stroke-linecap="round"/>
+        <path d="M -30,285 C 90,272 215,290 325,368 C 424,438 492,492 635,502 C 838,516 1076,472 1470,492" stroke="url(#wcGoldRiver)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
+        <path d="M -30,310 C 100,295 230,310 340,390 C 438,460 505,505 650,514 C 855,528 1092,484 1470,504" stroke="url(#wcGoldRiver)" stroke-width="5.4" stroke-linecap="round"/>
+        <path d="M -30,335 C 110,318 245,330 355,412 C 452,482 518,518 665,526 C 872,540 1108,496 1470,516" stroke="url(#wcGoldRiver)" stroke-width="2.8" stroke-linecap="round" opacity="0.9"/>
+        <path d="M -30,360 C 120,340 260,350 370,435 C 466,504 530,530 680,538 C 890,552 1125,508 1470,528" stroke="url(#wcGoldRiver)" stroke-width="5.0" stroke-linecap="round"/>
+        <path d="M -30,385 C 130,362 275,370 385,456 C 480,525 542,542 695,550 C 908,564 1142,520 1470,540" stroke="url(#wcGoldRiver)" stroke-width="2.8" stroke-linecap="round" opacity="0.9"/>
+        <path d="M -30,410 C 140,385 290,390 400,478 C 494,545 555,555 710,562 C 925,576 1158,532 1470,552" stroke="url(#wcGoldRiver)" stroke-width="4.8" stroke-linecap="round"/>
+        <path d="M -30,435 C 150,408 305,410 415,500 C 508,565 568,568 725,574 C 942,588 1175,544 1470,564" stroke="url(#wcGoldRiver)" stroke-width="2.6" stroke-linecap="round" opacity="0.88"/>
+        <path d="M -30,460 C 160,430 320,430 430,520 C 522,585 580,580 740,586 C 960,600 1192,556 1470,576" stroke="url(#wcGoldRiver)" stroke-width="4.2" stroke-linecap="round"/>
+        <path d="M -30,485 C 170,452 335,450 445,540 C 536,605 592,592 755,598 C 978,612 1208,568 1470,588" stroke="url(#wcGoldRiver)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+
+        <!-- 底層橫向綿延水波浪花 (貫穿橫向下緣) -->
+        <path d="M -20,515 C 220,490 500,600 780,592 C 1060,580 1280,550 1480,560" stroke="url(#wcGoldRiver)" stroke-width="3.8" stroke-linecap="round"/>
+        <path d="M -20,535 C 240,508 520,612 800,604 C 1080,592 1290,562 1480,572" stroke="url(#wcGoldRiver)" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+        <path d="M -20,555 C 260,525 540,624 820,616 C 1100,604 1300,574 1480,584" stroke="url(#wcGoldRiver)" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M -20,575 C 280,542 560,634 840,626 C 1120,614 1310,584 1480,594" stroke="url(#wcGoldRiver)" stroke-width="1.8" stroke-linecap="round" opacity="0.75"/>
+      </g>
+
+      <!-- ==================== 第三層：晶瑩高光刀脊層 (Luminous Chisel Spine Highlights) ==================== -->
+      <g id="wc-highlight-spines">
+        <path d="M -30,60 C 60,68 150,92 225,135 C 285,172 328,218 355,270" stroke="url(#wcGoldHighlight)" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M -30,110 C 76,116 174,142 255,188 C 315,224 356,270 384,320" stroke="url(#wcGoldHighlight)" stroke-width="2.0" stroke-linecap="round"/>
+        <path d="M -30,160 C 92,164 198,190 285,238 C 344,272 384,320 412,370" stroke="url(#wcGoldHighlight)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M -30,210 C 108,212 222,238 315,286 C 372,320 412,370 438,420" stroke="url(#wcGoldHighlight)" stroke-width="1.9" stroke-linecap="round"/>
+
+        <path d="M -30,260 C 80,250 200,270 310,345 C 410,415 480,480 620,490 C 820,505 1060,460 1470,480" stroke="url(#wcGoldHighlight)" stroke-width="1.9" stroke-linecap="round"/>
+        <path d="M -30,310 C 100,295 230,310 340,390 C 438,460 505,505 650,514 C 855,528 1092,484 1470,504" stroke="url(#wcGoldHighlight)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M -30,360 C 120,340 260,350 370,435 C 466,504 530,530 680,538 C 890,552 1125,508 1470,528" stroke="url(#wcGoldHighlight)" stroke-width="2.1" stroke-linecap="round"/>
+        <path d="M -30,410 C 140,385 290,390 400,478 C 494,545 555,555 710,562 C 925,576 1158,532 1470,552" stroke="url(#wcGoldHighlight)" stroke-width="2.0" stroke-linecap="round"/>
+        <path d="M -20,515 C 220,490 500,600 780,592 C 1060,580 1280,550 1480,560" stroke="url(#wcGoldHighlight)" stroke-width="1.7" stroke-linecap="round"/>
       </g>
     </svg>
 
@@ -393,7 +416,7 @@
           </div>
 
           <!-- 關鍵數據標籤 -->
-          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/15 max-w-lg">
+          <div class="grid grid-cols-3 gap-4 pt-4 max-w-lg">
             <div>
               <span class="font-serif text-2xl sm:text-3xl font-bold text-[#ffd875] drop-shadow-md">2008</span>
               <p class="text-xs text-stone-200 drop-shadow-sm font-medium">創團年份 <span class="text-[10px] text-stone-400 font-normal block font-sans">Founded</span></p>
