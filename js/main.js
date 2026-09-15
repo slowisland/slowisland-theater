@@ -4024,7 +4024,7 @@ const stageBackdropOptions = [
   },
   {
     name: "移居的人們",
-    desc: "南薑香茅鍋釜與舞台炊煙",
+    desc: "那些邊境山村與移居的人們",
     src: "images/唐健哲攝影03271拷貝.jpg"
   }
 ];
