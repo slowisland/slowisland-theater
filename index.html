@@ -78,7 +78,7 @@
   </script>
 
   <!-- 自定義與增強樣式 -->
-  <link rel="stylesheet" href="css/style.css?v=20260915_v41">
+  <link rel="stylesheet" href="css/style.css?v=20260915_v42">
 </head>
 <body class="bg-linen text-ink antialiased">
 
@@ -226,251 +226,78 @@
 
   <!-- ==================== 英雄首頁 Hero Section（暗底配原版木刻金色版畫 Theatrical Obsidian & Authentic Woodcut Gold） ==================== -->
   <section class="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 text-white theatrical-dark-gold-hero">
-    <!-- ==================== 東南亞質樸木刻金色版畫向量圖騰（純手刻木口木版畫，密排刀紋與紙張木紋肌理） ==================== -->
+    <!-- ==================== 東南亞質樸木刻金色版畫向量圖騰（淡雅古金、手刻頓挫刀感、疏朗簡約、無多餘排線） ==================== -->
     <svg class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden" viewBox="0 0 1440 640" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <defs>
-    <!-- 質樸古金版畫漸層 (Rustic Antique Gold & Ochre) -->
-    <linearGradient id="wcRusticGold" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7a4f10"/>
-      <stop offset="12%" stop-color="#b8861b"/>
-      <stop offset="30%" stop-color="#f0c654"/>
-      <stop offset="50%" stop-color="#ffe494"/>
-      <stop offset="70%" stop-color="#dfa832"/>
-      <stop offset="88%" stop-color="#ba8218"/>
-      <stop offset="100%" stop-color="#69400a"/>
+    <linearGradient id="wcSoftAntiqueGold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a4320" stop-opacity="0.45"/>
+      <stop offset="20%" stop-color="#8c703f" stop-opacity="0.70"/>
+      <stop offset="45%" stop-color="#c2a46c" stop-opacity="0.82"/>
+      <stop offset="70%" stop-color="#a88b54" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#543c18" stop-opacity="0.40"/>
     </linearGradient>
-    <linearGradient id="wcRiverGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f5cb5c"/>
-      <stop offset="25%" stop-color="#ffe8a3"/>
-      <stop offset="45%" stop-color="#e5b038"/>
-      <stop offset="70%" stop-color="#fcd86e"/>
-      <stop offset="90%" stop-color="#b8831b"/>
-      <stop offset="100%" stop-color="#6e4209"/>
+    <linearGradient id="wcSoftRiverGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ad9058" stop-opacity="0.75"/>
+      <stop offset="30%" stop-color="#cdb27b" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#bca068" stop-opacity="0.78"/>
+      <stop offset="85%" stop-color="#8c6f3d" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#4d3615" stop-opacity="0.35"/>
     </linearGradient>
-    <linearGradient id="wcChiselHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff8db" stop-opacity="0.98"/>
-      <stop offset="35%" stop-color="#ffe085" stop-opacity="0.95"/>
-      <stop offset="75%" stop-color="#f0be43" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#ba8218" stop-opacity="0.75"/>
+    <!-- 溫和木質陰雕槽 (Soft Wood Carving Groove) -->
+    <linearGradient id="wcSoftGougeShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140c03" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#211406" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#080502" stop-opacity="0.15"/>
     </linearGradient>
-    <!-- 凹版陰影 (木版刻刀挖除溝槽) -->
-    <linearGradient id="wcWoodGougeShadow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1f1204" stop-opacity="0.85"/>
-      <stop offset="60%" stop-color="#331c06" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0a0602" stop-opacity="0.3"/>
-    </linearGradient>
-    <!-- 大氣微光 (純平滑漸層，無任何色塊) -->
-    <radialGradient id="wcAmbientLeft" cx="15%" cy="70%" r="55%">
-      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.20"/>
-      <stop offset="50%" stop-color="#8c6218" stop-opacity="0.05"/>
+    <radialGradient id="wcAmbientSoftLeft" cx="16%" cy="72%" r="50%">
+      <stop offset="0%" stop-color="#c2a46c" stop-opacity="0.10"/>
+      <stop offset="50%" stop-color="#6e5225" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#0c0a08" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="wcAmbientBottom" cx="65%" cy="88%" r="45%">
-      <stop offset="0%" stop-color="#ffd875" stop-opacity="0.12"/>
-      <stop offset="60%" stop-color="#9e782f" stop-opacity="0.02"/>
+    <radialGradient id="wcAmbientSoftBottom" cx="65%" cy="88%" r="40%">
+      <stop offset="0%" stop-color="#c2a46c" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#6e5225" stop-opacity="0.01"/>
       <stop offset="100%" stop-color="#0c0a08" stop-opacity="0"/>
     </radialGradient>
-    <!-- 木刻版畫手工壓印微毛邊與紙張纖維濾鏡 (Woodcut Ink Bleed & Fiber Texture) -->
-    <filter id="woodcut-handprint" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04 0.08" numOctaves="2" result="woodgrain" />
-      <feDisplacementMap in="SourceGraphic" in2="woodgrain" scale="1.8" xChannelSelector="R" yChannelSelector="G" />
+    <filter id="woodcut-hand-chisel" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.07" numOctaves="2" result="grain" />
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.4" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </defs>
-  <!-- 沉浸大氣底光 -->
-  <rect width="1440" height="640" fill="url(#wcAmbientLeft)"/>
-  <rect width="1440" height="640" fill="url(#wcAmbientBottom)"/>
-  <!-- ==================== 木口木版畫手工刻紋系統 (Woodcut Relief System) ==================== -->
-  <g id="woodcut-master-artwork" filter="url(#woodcut-handprint)">
-    <!-- 1. 木刻陰刻深溝槽層 (Deep Chisel Grooves) -->
+  <rect width="1440" height="640" fill="url(#wcAmbientSoftLeft)"/>
+  <rect width="1440" height="640" fill="url(#wcAmbientSoftBottom)"/>
+  <!-- ==================== 質樸木刻手刻金線（線條精煉疏朗、微折角頓挫刀感、無多餘排線） ==================== -->
+  <g id="woodcut-artwork-group" filter="url(#woodcut-hand-chisel)">
+    <!-- 陰刻木口木槽陰影 (Subtle Carved Shadow Grooves) -->
     <g id="wc-shadow-layer">
-      <path d="M -30,45 C 50,55 140,80 215,125 C 275,165 320,215 348,268" stroke="url(#wcWoodGougeShadow)" stroke-width="7.5" stroke-linecap="round"/>
-      <path d="M -30,85 C 65,95 160,122 240,170 C 300,210 342,260 372,315" stroke="url(#wcWoodGougeShadow)" stroke-width="8.0" stroke-linecap="round"/>
-      <path d="M -30,125 C 78,135 180,165 265,215 C 324,252 365,302 396,360" stroke="url(#wcWoodGougeShadow)" stroke-width="8.5" stroke-linecap="round"/>
-      <path d="M -30,165 C 92,175 200,208 290,260 C 348,295 388,348 420,405" stroke="url(#wcWoodGougeShadow)" stroke-width="8.0" stroke-linecap="round"/>
-      <path d="M -30,205 C 105,212 220,248 315,305 C 372,342 410,392 440,450" stroke="url(#wcWoodGougeShadow)" stroke-width="7.5" stroke-linecap="round"/>
-      <path d="M -30,245 C 80,240 195,260 305,335 C 405,405 475,472 615,485 C 815,500 1055,455 1470,475" stroke="url(#wcWoodGougeShadow)" stroke-width="9.0" stroke-linecap="round"/>
-      <path d="M -30,295 C 100,285 225,300 335,380 C 432,450 500,496 645,508 C 850,522 1088,480 1470,500" stroke="url(#wcWoodGougeShadow)" stroke-width="9.5" stroke-linecap="round"/>
-      <path d="M -30,345 C 120,330 255,340 365,425 C 460,494 525,522 675,532 C 885,546 1120,504 1470,524" stroke="url(#wcWoodGougeShadow)" stroke-width="9.0" stroke-linecap="round"/>
-      <path d="M -30,395 C 140,375 285,380 395,468 C 488,535 550,548 705,556 C 920,570 1152,528 1470,548" stroke="url(#wcWoodGougeShadow)" stroke-width="8.5" stroke-linecap="round"/>
-      <path d="M -30,445 C 160,420 315,420 425,510 C 516,575 575,572 735,580 C 955,594 1188,552 1470,572" stroke="url(#wcWoodGougeShadow)" stroke-width="8.0" stroke-linecap="round"/>
-      <path d="M -20,500 C 220,475 500,585 780,582 C 1060,570 1280,542 1480,552" stroke="url(#wcWoodGougeShadow)" stroke-width="7.5" stroke-linecap="round"/>
-      <path d="M -20,540 C 260,510 540,608 820,602 C 1100,592 1300,564 1480,574" stroke="url(#wcWoodGougeShadow)" stroke-width="7.0" stroke-linecap="round"/>
+      <path d="M -20.0,85.0 C 4.6,88.7 25.5,92.8 45.0,96.0 C 71.6,104.6 91.7,114.8 115.0,122.0 C 142.0,135.7 161.4,150.2 185.0,162.0 C 208.5,180.8 229.8,200.9 250.0,218.0 C 272.3,240.8 287.9,266.6 305.0,285.0 C 317.3,304.3 328.9,330.5 340.0,350.0" stroke="url(#wcSoftGougeShadow)" stroke-width="4.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,140.0 C 7.5,144.3 30.5,147.7 55.0,152.0 C 85.4,162.5 109.3,175.6 135.0,185.0 C 162.8,200.3 186.6,220.5 210.0,235.0 C 237.1,256.0 258.7,281.7 280.0,298.0 C 300.1,320.9 318.1,351.5 335.0,372.0 C 347.4,394.3 359.9,422.0 370.0,440.0" stroke="url(#wcSoftGougeShadow)" stroke-width="5.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,195.0 C 11.9,200.4 38.8,203.5 65.0,208.0 C 100.3,220.6 124.8,236.7 155.0,246.0 C 184.7,263.3 209.2,286.6 235.0,302.0 C 261.6,325.0 285.6,352.4 308.0,372.0 C 330.5,396.7 347.7,425.8 365.0,448.0 C 377.9,467.7 387.6,494.1 400.0,510.0" stroke="url(#wcSoftGougeShadow)" stroke-width="6.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,255.0 C 14.8,258.3 44.0,265.6 75.0,268.0 C 113.0,282.1 141.8,298.3 175.0,310.0 C 208.3,329.9 234.1,355.8 260.0,372.0 C 289.3,394.2 313.8,424.2 338.0,446.0 C 358.2,469.7 377.8,498.8 395.0,518.0 C 409.7,533.1 417.5,552.9 430.0,568.0" stroke="url(#wcSoftGougeShadow)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,315.0 C 19.0,318.8 50.5,324.0 85.0,328.0 C 127.0,343.2 159.1,360.7 195.0,374.0 C 229.4,396.7 257.6,424.1 288.0,442.0 C 317.9,463.6 343.5,493.6 370.0,514.0 C 394.3,533.7 412.2,555.2 432.0,572.0 C 449.0,583.4 460.5,597.4 475.0,608.0" stroke="url(#wcSoftGougeShadow)" stroke-width="4.9" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,275.0 C 16.6,273.7 46.6,271.4 80.0,270.0 C 125.1,277.4 159.6,288.4 195.0,295.0 C 239.9,319.2 273.9,352.7 310.0,375.0 C 352.1,399.3 386.2,430.9 420.0,452.0 C 466.3,464.1 501.7,478.9 540.0,488.0 C 601.1,491.4 647.7,495.4 700.0,498.0 C 782.6,494.4 849.4,490.1 920.0,486.0 C 1011.5,481.1 1083.3,475.1 1160.0,472.0 C 1229.8,475.6 1282.1,476.9 1340.0,480.0 C 1385.4,483.0 1421.4,487.1 1460.0,488.0" stroke="url(#wcSoftGougeShadow)" stroke-width="5.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,335.0 C 24.9,331.2 58.1,326.7 95.0,325.0 C 144.0,330.4 180.5,339.7 220.0,345.0 C 266.2,369.4 301.2,400.1 340.0,422.0 C 382.4,445.1 417.5,476.1 455.0,496.0 C 502.3,502.5 538.6,512.8 580.0,520.0 C 642.3,520.5 688.7,525.1 740.0,526.0 C 822.5,523.1 890.8,518.3 960.0,514.0 C 1046.3,510.2 1115.6,503.4 1190.0,498.0 C 1255.5,500.6 1306.4,504.6 1360.0,506.0 C 1398.9,508.0 1429.4,512.1 1460.0,514.0" stroke="url(#wcSoftGougeShadow)" stroke-width="6.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,395.0 C 31.3,391.3 70.6,383.8 115.0,380.0 C 163.0,386.2 202.5,392.4 245.0,398.0 C 293.5,419.7 329.0,449.2 370.0,470.0 C 416.5,491.7 452.0,520.2 490.0,538.0 C 538.6,542.3 577.4,548.9 620.0,552.0 C 679.4,553.4 728.3,553.7 780.0,554.0 C 862.7,551.5 929.1,545.2 1000.0,542.0 C 1084.9,537.2 1149.1,529.7 1220.0,526.0 C 1282.0,528.6 1329.2,530.5 1380.0,532.0 C 1411.7,533.4 1434.0,538.7 1460.0,540.0" stroke="url(#wcSoftGougeShadow)" stroke-width="5.9" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,455.0 C 38.5,449.8 85.1,439.7 135.0,435.0 C 189.2,440.6 230.8,444.4 275.0,450.0 C 324.1,470.6 362.7,497.0 405.0,516.0 C 449.9,534.6 485.1,558.0 525.0,574.0 C 579.6,575.9 619.7,578.9 665.0,580.0 C 725.3,580.6 774.9,579.5 825.0,578.0 C 906.7,572.7 969.9,569.2 1040.0,566.0 C 1120.8,561.1 1184.2,556.2 1250.0,552.0 C 1303.9,554.1 1350.0,555.7 1395.0,558.0 C 1420.7,560.4 1438.5,563.2 1460.0,564.0" stroke="url(#wcSoftGougeShadow)" stroke-width="5.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,515.0 C 47.7,506.9 102.5,495.8 160.0,490.0 C 217.0,495.2 262.2,498.7 310.0,502.0 C 362.2,520.4 401.1,544.8 445.0,560.0 C 491.5,574.6 531.2,590.4 570.0,602.0 C 627.0,601.3 671.0,604.3 720.0,604.0 C 781.5,602.4 827.7,600.4 880.0,598.0 C 961.3,595.9 1023.3,590.6 1090.0,588.0 C 1165.8,583.1 1224.6,580.8 1290.0,576.0 C 1337.2,576.9 1375.0,580.3 1415.0,580.0 C 1433.3,582.5 1446.5,584.4 1460.0,586.0" stroke="url(#wcSoftGougeShadow)" stroke-width="4.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,565.0 C 63.6,557.3 129.0,548.3 200.0,540.0 C 261.5,544.6 308.7,549.6 360.0,552.0 C 413.9,567.0 454.0,585.0 500.0,598.0 C 558.4,605.2 601.6,614.2 650.0,620.0 C 709.7,618.8 759.6,618.5 810.0,618.0 C 874.3,616.9 925.7,612.1 980.0,610.0 C 1047.1,607.7 1102.4,603.6 1160.0,602.0 C 1225.9,600.4 1275.7,598.8 1330.0,596.0 C 1365.8,598.1 1395.2,597.1 1425.0,598.0 C 1438.2,601.3 1449.1,600.9 1460.0,604.0" stroke="url(#wcSoftGougeShadow)" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <!-- 2. 木口木版金箔刻紋主層 (Hand-Carved Gold Woodcut Chisel Lines) -->
-    <g id="wc-chisel-body">
-      <path d="M -30,35 C 45,45 130,70 205,112 C 265,152 308,202 336,252" stroke="url(#wcRusticGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,45 C 50,55 140,80 215,125 C 275,165 320,215 348,268" stroke="url(#wcRusticGold)" stroke-width="3.8" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,55 C 55,65 148,90 224,136 C 284,176 328,226 356,280" stroke="url(#wcRusticGold)" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
-      <path d="M -30,68 C 60,78 155,105 232,152 C 292,192 335,242 364,296" stroke="url(#wcRusticGold)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,85 C 65,95 160,122 240,170 C 300,210 342,260 372,315" stroke="url(#wcRusticGold)" stroke-width="4.6" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,96 C 70,105 168,134 248,182 C 307,222 349,272 379,328" stroke="url(#wcRusticGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,108 C 74,118 174,148 256,198 C 315,236 356,286 386,342" stroke="url(#wcRusticGold)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,125 C 78,135 180,165 265,215 C 324,252 365,302 396,360" stroke="url(#wcRusticGold)" stroke-width="4.8" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,138 C 82,148 186,178 272,228 C 330,265 372,316 403,374" stroke="url(#wcRusticGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,150 C 88,160 194,192 282,244 C 340,280 380,332 411,390" stroke="url(#wcRusticGold)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,165 C 92,175 200,208 290,260 C 348,295 388,348 420,405" stroke="url(#wcRusticGold)" stroke-width="5.0" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,178 C 96,188 206,220 298,272 C 356,308 394,360 426,418" stroke="url(#wcRusticGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,190 C 100,200 212,234 306,288 C 364,324 402,375 433,434" stroke="url(#wcRusticGold)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,205 C 105,212 220,248 315,305 C 372,342 410,392 440,450" stroke="url(#wcRusticGold)" stroke-width="4.6" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,218 C 110,224 226,260 322,318 C 378,354 416,404 446,462" stroke="url(#wcRusticGold)" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
-      <path d="M -30,230 C 114,232 232,272 330,330 C 385,368 422,418 452,475" stroke="url(#wcRusticGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.88"/>
-      <path d="M -30,245 C 80,240 195,260 305,335 C 405,405 475,472 615,485 C 815,500 1055,455 1470,475" stroke="url(#wcRiverGold)" stroke-width="4.8" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,260 C 88,255 205,275 315,350 C 414,420 484,482 625,492 C 825,508 1065,464 1470,484" stroke="url(#wcRiverGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,272 C 94,268 214,288 325,365 C 424,435 492,492 635,500 C 838,514 1076,472 1470,492" stroke="url(#wcRiverGold)" stroke-width="1.7" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,285 C 98,278 220,295 330,375 C 428,444 496,498 640,504 C 845,518 1082,476 1470,496" stroke="url(#wcRiverGold)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,295 C 100,285 225,300 335,380 C 432,450 500,496 645,508 C 850,522 1088,480 1470,500" stroke="url(#wcRiverGold)" stroke-width="5.2" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,310 C 106,300 234,314 345,395 C 442,465 508,506 655,516 C 860,530 1098,488 1470,508" stroke="url(#wcRiverGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,322 C 112,312 242,326 354,408 C 450,478 515,514 664,524 C 870,538 1108,495 1470,515" stroke="url(#wcRiverGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,335 C 116,322 250,334 360,418 C 456,488 520,520 670,528 C 878,542 1114,500 1470,520" stroke="url(#wcRiverGold)" stroke-width="2.8" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,345 C 120,330 255,340 365,425 C 460,494 525,522 675,532 C 885,546 1120,504 1470,524" stroke="url(#wcRiverGold)" stroke-width="5.0" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,360 C 126,344 265,354 375,440 C 470,508 532,532 685,540 C 895,554 1130,512 1470,532" stroke="url(#wcRiverGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,372 C 132,356 274,366 384,452 C 478,520 540,540 694,548 C 905,562 1140,520 1470,540" stroke="url(#wcRiverGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -30,385 C 136,366 280,374 390,460 C 484,528 546,544 700,552 C 912,566 1146,524 1470,544" stroke="url(#wcRiverGold)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,395 C 140,375 285,380 395,468 C 488,535 550,548 705,556 C 920,570 1152,528 1470,548" stroke="url(#wcRiverGold)" stroke-width="4.8" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,410 C 146,390 295,394 405,482 C 498,548 558,556 715,564 C 932,578 1162,536 1470,556" stroke="url(#wcRiverGold)" stroke-width="2.0" stroke-linecap="round" opacity="0.88"/>
-      <path d="M -30,425 C 152,404 305,406 415,496 C 506,562 566,564 725,572 C 944,586 1175,544 1470,564" stroke="url(#wcRiverGold)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -30,445 C 160,420 315,420 425,510 C 516,575 575,572 735,580 C 955,594 1188,552 1470,572" stroke="url(#wcRiverGold)" stroke-width="4.4" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -30,465 C 168,438 328,436 438,526 C 528,590 585,582 748,590 C 970,604 1202,562 1470,582" stroke="url(#wcRiverGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -20,490 C 210,465 490,575 770,572 C 1050,560 1270,534 1480,544" stroke="url(#wcRiverGold)" stroke-width="2.0" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -20,500 C 220,475 500,585 780,582 C 1060,570 1280,542 1480,552" stroke="url(#wcRiverGold)" stroke-width="3.8" stroke-linecap="round" opacity="1.0"/>
-      <path d="M -20,515 C 235,490 515,595 795,592 C 1075,580 1290,552 1480,562" stroke="url(#wcRiverGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -20,528 C 248,500 528,602 808,598 C 1088,586 1295,558 1480,568" stroke="url(#wcRiverGold)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-      <path d="M -20,540 C 260,510 540,608 820,602 C 1100,592 1300,564 1480,574" stroke="url(#wcRiverGold)" stroke-width="3.4" stroke-linecap="round" opacity="0.95"/>
-      <path d="M -20,555 C 272,525 552,618 832,610 C 1112,600 1308,572 1480,582" stroke="url(#wcRiverGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
-      <path d="M -20,568 C 284,538 564,625 844,618 C 1124,608 1314,580 1480,590" stroke="url(#wcRiverGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
-      <path d="M -20,580 C 295,550 575,632 855,625 C 1135,615 1320,588 1480,598" stroke="url(#wcRiverGold)" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
-    </g>
-    <!-- 3. 木刻版畫短刀排線與木紋肌理 (Woodcut Chisel Hatching & Grain Textures) -->
-    <g id="wc-hatching-textures">
-      <path d="M 40,82 C 55,98 68,116 80,135" stroke="url(#wcChiselHighlight)" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-      <path d="M 58,95 C 74,112 88,130 100,150" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <path d="M 76,108 C 92,126 108,145 120,166" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 94,122 C 112,140 128,160 140,182" stroke="url(#wcChiselHighlight)" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 112,136 C 130,155 148,175 160,198" stroke="url(#wcChiselHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 132,150 C 152,170 170,192 184,216" stroke="url(#wcChiselHighlight)" stroke-width="2.2" stroke-linecap="round" opacity="0.88"/>
-      <path d="M 152,165 C 172,185 192,208 206,234" stroke="url(#wcChiselHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 174,180 C 196,202 216,225 230,252" stroke="url(#wcChiselHighlight)" stroke-width="2.6" stroke-linecap="round" opacity="0.92"/>
-      <path d="M 196,195 C 218,218 240,242 254,270" stroke="url(#wcChiselHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 218,210 C 242,234 264,260 278,288" stroke="url(#wcChiselHighlight)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 242,226 C 266,252 288,278 302,308" stroke="url(#wcChiselHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.88"/>
-      <path d="M 268,245 C 292,272 314,300 328,330" stroke="url(#wcChiselHighlight)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 295,265 C 320,292 342,322 356,354" stroke="url(#wcChiselHighlight)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 322,286 C 348,314 370,345 384,378" stroke="url(#wcChiselHighlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.88"/>
-      <path d="M 350,308 C 376,338 398,370 412,404" stroke="url(#wcChiselHighlight)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 380,332 C 406,364 428,398 440,432" stroke="url(#wcChiselHighlight)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
-      <path d="M 460,430 C 478,442 498,452 520,458" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
-      <path d="M 500,442 C 520,454 542,464 565,470" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.85"/>
-      <path d="M 550,458 C 572,468 596,476 620,480" stroke="url(#wcChiselHighlight)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
-      <path d="M 680,488 C 705,492 730,494 755,492" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
-      <path d="M 740,492 C 768,495 795,495 822,490" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.82"/>
-      <path d="M 810,490 C 838,492 865,488 892,482" stroke="url(#wcChiselHighlight)" stroke-width="1.9" stroke-linecap="round" opacity="0.8"/>
-      <path d="M 960,470 C 990,466 1020,460 1050,456" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.82"/>
-      <path d="M 1030,460 C 1062,456 1094,452 1125,450" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.78"/>
-      <path d="M 1180,458 C 1215,462 1250,466 1285,470" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.8"/>
-      <path d="M 1260,468 C 1295,472 1330,475 1365,476" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.75"/>
-      <ellipse cx="35" cy="75" rx="2.3" ry="1.3" transform="rotate(-25 35 75)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="65" cy="90" rx="2.9" ry="1.5" transform="rotate(-25 65 90)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="105" cy="115" rx="2.6" ry="1.4" transform="rotate(-25 105 115)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="145" cy="140" rx="3.1" ry="1.7" transform="rotate(-25 145 140)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="185" cy="168" rx="2.9" ry="1.5" transform="rotate(-25 185 168)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="225" cy="195" rx="3.4" ry="1.8" transform="rotate(-25 225 195)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="270" cy="225" rx="3.1" ry="1.7" transform="rotate(-25 270 225)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="315" cy="258" rx="2.9" ry="1.5" transform="rotate(-25 315 258)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="360" cy="292" rx="3.2" ry="1.8" transform="rotate(-25 360 292)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="410" cy="330" rx="3.0" ry="1.6" transform="rotate(-25 410 330)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="455" cy="375" rx="3.1" ry="1.7" transform="rotate(-25 455 375)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="490" cy="420" rx="2.9" ry="1.5" transform="rotate(-25 490 420)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="540" cy="445" rx="2.6" ry="1.4" transform="rotate(-25 540 445)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="600" cy="465" rx="3.1" ry="1.7" transform="rotate(-25 600 465)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="660" cy="482" rx="2.9" ry="1.5" transform="rotate(-25 660 482)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="730" cy="488" rx="2.6" ry="1.4" transform="rotate(-25 730 488)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="800" cy="485" rx="2.9" ry="1.5" transform="rotate(-25 800 485)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="870" cy="475" rx="3.1" ry="1.7" transform="rotate(-25 870 475)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="940" cy="462" rx="2.6" ry="1.4" transform="rotate(-25 940 462)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="1010" cy="455" rx="2.9" ry="1.5" transform="rotate(-25 1010 455)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="1080" cy="452" rx="2.6" ry="1.4" transform="rotate(-25 1080 452)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="1150" cy="456" rx="2.9" ry="1.5" transform="rotate(-25 1150 456)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="1220" cy="465" rx="2.6" ry="1.4" transform="rotate(-25 1220 465)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-      <ellipse cx="1300" cy="472" rx="2.9" ry="1.5" transform="rotate(-25 1300 472)" fill="url(#wcChiselHighlight)" opacity="0.85"/>
-    </g>
-    <!-- 4. 刻刀刀脊晶瑩高光細線 (Luminous Knife-Ridge Highlights) -->
-    <g id="wc-spine-highlights">
-      <path d="M -30,45 C 50,55 140,80 215,125 C 275,165 320,215 348,268" stroke="url(#wcChiselHighlight)" stroke-width="1.6" stroke-linecap="round" opacity="0.95"/>
-      <path d="M -30,85 C 65,95 160,122 240,170 C 300,210 342,260 372,315" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.95"/>
-      <path d="M -30,125 C 78,135 180,165 265,215 C 324,252 365,302 396,360" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.98"/>
-      <path d="M -30,165 C 92,175 200,208 290,260 C 348,295 388,348 420,405" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.98"/>
-      <path d="M -30,205 C 105,212 220,248 315,305 C 372,342 410,392 440,450" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.92"/>
-      <path d="M -30,245 C 80,240 195,260 305,335 C 405,405 475,472 615,485 C 815,500 1055,455 1470,475" stroke="url(#wcChiselHighlight)" stroke-width="1.9" stroke-linecap="round" opacity="0.95"/>
-      <path d="M -30,295 C 100,285 225,300 335,380 C 432,450 500,496 645,508 C 850,522 1088,480 1470,500" stroke="url(#wcChiselHighlight)" stroke-width="2.2" stroke-linecap="round" opacity="0.98"/>
-      <path d="M -30,345 C 120,330 255,340 365,425 C 460,494 525,522 675,532 C 885,546 1120,504 1470,524" stroke="url(#wcChiselHighlight)" stroke-width="2.0" stroke-linecap="round" opacity="0.95"/>
-      <path d="M -30,395 C 140,375 285,380 395,468 C 488,535 550,548 705,556 C 920,570 1152,528 1470,548" stroke="url(#wcChiselHighlight)" stroke-width="1.8" stroke-linecap="round" opacity="0.92"/>
-      <path d="M -20,500 C 220,475 500,585 780,582 C 1060,570 1280,542 1480,552" stroke="url(#wcChiselHighlight)" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <!-- 主金箔手刻刀痕 (Rustic Antique Gold Hand-Chiseled Lines) -->
+    <g id="wc-gold-layer">
+      <path d="M -20.0,85.0 C 4.6,88.7 25.5,92.8 45.0,96.0 C 71.6,104.6 91.7,114.8 115.0,122.0 C 142.0,135.7 161.4,150.2 185.0,162.0 C 208.5,180.8 229.8,200.9 250.0,218.0 C 272.3,240.8 287.9,266.6 305.0,285.0 C 317.3,304.3 328.9,330.5 340.0,350.0" stroke="url(#wcSoftAntiqueGold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,140.0 C 7.5,144.3 30.5,147.7 55.0,152.0 C 85.4,162.5 109.3,175.6 135.0,185.0 C 162.8,200.3 186.6,220.5 210.0,235.0 C 237.1,256.0 258.7,281.7 280.0,298.0 C 300.1,320.9 318.1,351.5 335.0,372.0 C 347.4,394.3 359.9,422.0 370.0,440.0" stroke="url(#wcSoftAntiqueGold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,195.0 C 11.9,200.4 38.8,203.5 65.0,208.0 C 100.3,220.6 124.8,236.7 155.0,246.0 C 184.7,263.3 209.2,286.6 235.0,302.0 C 261.6,325.0 285.6,352.4 308.0,372.0 C 330.5,396.7 347.7,425.8 365.0,448.0 C 377.9,467.7 387.6,494.1 400.0,510.0" stroke="url(#wcSoftAntiqueGold)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,255.0 C 14.8,258.3 44.0,265.6 75.0,268.0 C 113.0,282.1 141.8,298.3 175.0,310.0 C 208.3,329.9 234.1,355.8 260.0,372.0 C 289.3,394.2 313.8,424.2 338.0,446.0 C 358.2,469.7 377.8,498.8 395.0,518.0 C 409.7,533.1 417.5,552.9 430.0,568.0" stroke="url(#wcSoftAntiqueGold)" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,315.0 C 19.0,318.8 50.5,324.0 85.0,328.0 C 127.0,343.2 159.1,360.7 195.0,374.0 C 229.4,396.7 257.6,424.1 288.0,442.0 C 317.9,463.6 343.5,493.6 370.0,514.0 C 394.3,533.7 412.2,555.2 432.0,572.0 C 449.0,583.4 460.5,597.4 475.0,608.0" stroke="url(#wcSoftAntiqueGold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,275.0 C 16.6,273.7 46.6,271.4 80.0,270.0 C 125.1,277.4 159.6,288.4 195.0,295.0 C 239.9,319.2 273.9,352.7 310.0,375.0 C 352.1,399.3 386.2,430.9 420.0,452.0 C 466.3,464.1 501.7,478.9 540.0,488.0 C 601.1,491.4 647.7,495.4 700.0,498.0 C 782.6,494.4 849.4,490.1 920.0,486.0 C 1011.5,481.1 1083.3,475.1 1160.0,472.0 C 1229.8,475.6 1282.1,476.9 1340.0,480.0 C 1385.4,483.0 1421.4,487.1 1460.0,488.0" stroke="url(#wcSoftRiverGold)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,335.0 C 24.9,331.2 58.1,326.7 95.0,325.0 C 144.0,330.4 180.5,339.7 220.0,345.0 C 266.2,369.4 301.2,400.1 340.0,422.0 C 382.4,445.1 417.5,476.1 455.0,496.0 C 502.3,502.5 538.6,512.8 580.0,520.0 C 642.3,520.5 688.7,525.1 740.0,526.0 C 822.5,523.1 890.8,518.3 960.0,514.0 C 1046.3,510.2 1115.6,503.4 1190.0,498.0 C 1255.5,500.6 1306.4,504.6 1360.0,506.0 C 1398.9,508.0 1429.4,512.1 1460.0,514.0" stroke="url(#wcSoftRiverGold)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,395.0 C 31.3,391.3 70.6,383.8 115.0,380.0 C 163.0,386.2 202.5,392.4 245.0,398.0 C 293.5,419.7 329.0,449.2 370.0,470.0 C 416.5,491.7 452.0,520.2 490.0,538.0 C 538.6,542.3 577.4,548.9 620.0,552.0 C 679.4,553.4 728.3,553.7 780.0,554.0 C 862.7,551.5 929.1,545.2 1000.0,542.0 C 1084.9,537.2 1149.1,529.7 1220.0,526.0 C 1282.0,528.6 1329.2,530.5 1380.0,532.0 C 1411.7,533.4 1434.0,538.7 1460.0,540.0" stroke="url(#wcSoftRiverGold)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,455.0 C 38.5,449.8 85.1,439.7 135.0,435.0 C 189.2,440.6 230.8,444.4 275.0,450.0 C 324.1,470.6 362.7,497.0 405.0,516.0 C 449.9,534.6 485.1,558.0 525.0,574.0 C 579.6,575.9 619.7,578.9 665.0,580.0 C 725.3,580.6 774.9,579.5 825.0,578.0 C 906.7,572.7 969.9,569.2 1040.0,566.0 C 1120.8,561.1 1184.2,556.2 1250.0,552.0 C 1303.9,554.1 1350.0,555.7 1395.0,558.0 C 1420.7,560.4 1438.5,563.2 1460.0,564.0" stroke="url(#wcSoftRiverGold)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,515.0 C 47.7,506.9 102.5,495.8 160.0,490.0 C 217.0,495.2 262.2,498.7 310.0,502.0 C 362.2,520.4 401.1,544.8 445.0,560.0 C 491.5,574.6 531.2,590.4 570.0,602.0 C 627.0,601.3 671.0,604.3 720.0,604.0 C 781.5,602.4 827.7,600.4 880.0,598.0 C 961.3,595.9 1023.3,590.6 1090.0,588.0 C 1165.8,583.1 1224.6,580.8 1290.0,576.0 C 1337.2,576.9 1375.0,580.3 1415.0,580.0 C 1433.3,582.5 1446.5,584.4 1460.0,586.0" stroke="url(#wcSoftRiverGold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -20.0,565.0 C 63.6,557.3 129.0,548.3 200.0,540.0 C 261.5,544.6 308.7,549.6 360.0,552.0 C 413.9,567.0 454.0,585.0 500.0,598.0 C 558.4,605.2 601.6,614.2 650.0,620.0 C 709.7,618.8 759.6,618.5 810.0,618.0 C 874.3,616.9 925.7,612.1 980.0,610.0 C 1047.1,607.7 1102.4,603.6 1160.0,602.0 C 1225.9,600.4 1275.7,598.8 1330.0,596.0 C 1365.8,598.1 1395.2,597.1 1425.0,598.0 C 1438.2,601.3 1449.1,600.9 1460.0,604.0" stroke="url(#wcSoftRiverGold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
 </svg>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        
-        <!-- 左側文案 (依使用者上傳圖稿精準呈現) -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-[#d4af37]/40 text-[#ffd875] text-xs font-serif tracking-widest shadow-lg backdrop-blur-md">
-            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            <span>桃園在地深耕 · 2008年創立演藝團隊</span>
-            <span class="text-[10px] text-amber-200/60 font-sans tracking-normal font-light">| Rooted in Taoyuan since 2008</span>
-          </div>
-
-          <div>
-            <h1 class="font-literary text-3xl sm:text-4xl lg:text-[45px] font-bold text-white leading-[1.8] sm:leading-[1.9] lg:leading-[2.0] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] space-y-2 sm:space-y-3">
-              <span class="block">以緩慢舒緩匆忙步調，</span>
-              <span class="block">在日常邊陲看見</span>
-              <span class="block gold-text-gradient gold-double-underline">生命的劇場。</span>
-            </h1>
-            <div class="border-l-2 border-[#d4af37]/60 pl-3.5 mt-4">
-              <p class="font-sans text-xs sm:text-sm tracking-wider text-stone-300/90 font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                Slowing the rush of life —<br>
-                Unveiling theatre at the margins of everyday existence.
-              </p>
-            </div>
-          </div>
-
-          <!-- 劇團宗旨核心卡片 (依圖稿暗底黑玻璃金框設計) -->
-          <div class="relative theatrical-quote-card p-5 sm:p-6 rounded-2xl max-w-2xl">
-            <!-- 金色引號標記 /// -->
-            <div class="flex items-center gap-1 mb-2 text-[#d4af37] text-xs font-mono font-bold tracking-widest select-none">///</div>
-            
-            <p class="font-literary text-sm sm:text-base text-stone-100 leading-[2.1] font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-              慢島劇團立足於台灣桃園，以<span class="text-[#ffd875] font-medium">「慢島」</span>為號，打破典型黑盒子舞台的束縛，從卡拉OK店到常民廚房，從偏鄉小學到工廠廠房，我們用深刻的田野調查，多感官體驗與細膩表演，記錄屬於這座島嶼上最動人的生命記憶。
-            </p>
-
-            <!-- 英文翻譯對照 -->
-            <p class="font-sans text-xs text-stone-400/90 leading-relaxed font-light mt-3 pt-3 border-t border-white/10 italic">
-              Based in Taoyuan, Taiwan, Slow Island Theatre breaks free from conventional black-box boundaries. From local karaoke bars to domestic kitchens, from remote rural schools to industrial factory floors, we weave in-depth ethnography, multi-sensory immersion, and nuanced performance to document the island's most poignant human memories.
-            </p>
-
-            <!-- 底部精緻金線與標語 -->
-            <div class="mt-3.5 pt-2.5 border-t border-[#d4af37]/20 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#ffd875]/85 font-serif tracking-widest">
-              <span class="flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
-                <span>生活即劇場 · 田野即舞台</span>
-                <span class="text-[10px] text-stone-400 font-sans tracking-normal italic ml-1">(Life as Theatre, Field as Stage)</span>
-              </span>
-              <span class="text-stone-400 font-sans tracking-normal italic text-[10px]">Slow Island Theatre</span>
-            </div>
-          </div>
-
-          <!-- 快速按鈕群 -->
-          <div class="flex flex-wrap gap-4 pt-1">
-            <a href="#featured" class="px-6 py-3.5 rounded-xl bg-[#8c1d1d] hover:bg-[#5e1212] text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 flex items-center gap-2 border border-[#d4af37]/30">
-              <span>探索主推劇目</span>
-              <span class="text-xs font-normal opacity-80 font-sans">/ Explore Shows</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </a>
-            
-            <a href="https://www.youtube.com/watch?v=qq_W8N0qOao&t=3s" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-black/60 border border-[#d4af37]/40 hover:border-[#ffd875] text-white font-medium transition-all duration-200 flex items-center gap-2 hover:bg-black/80 backdrop-blur-md shadow-lg cursor-pointer" title="前往 YouTube 觀看慢島劇團簡介影片（新分頁開啟）">
-              <svg class="w-5 h-5 text-red-500 fill-current shrink-0" viewBox="0 0 24 24">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
               <span>觀看劇團簡介影片 <span class="text-xs opacity-75 font-sans font-light">/ Intro Video</span> ▶</span>
             </a>
           </div>
@@ -1678,34 +1505,22 @@
 
   <!-- ==================== 頁尾 Footer（暗底配原版木刻金色版畫） ==================== -->
   <footer class="relative overflow-hidden py-14 text-xs bg-[#0c0a08] text-stone-300 border-t border-[#d4af37]/30">
-    <!-- 頁尾頂端東南亞木刻金色波紋 (Pure Vector Authentic Woodcut Gold Waves) -->
+    <!-- 頁尾頂端東南亞木刻金色波紋 (Muted Authentic Woodcut Gold Waves) -->
     <svg class="absolute top-0 left-0 right-0 w-full h-16 pointer-events-none select-none z-0" viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <linearGradient id="footerWoodcutGold" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#7a4f10" stop-opacity="0.6"/>
-          <stop offset="25%" stop-color="#ffd875" stop-opacity="0.95"/>
-          <stop offset="50%" stop-color="#f3c34e" stop-opacity="0.98"/>
-          <stop offset="75%" stop-color="#d4af37" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="#5a3a0e" stop-opacity="0.5"/>
+          <stop offset="0%" stop-color="#5a4320" stop-opacity="0.35"/>
+          <stop offset="30%" stop-color="#c2a46c" stop-opacity="0.75"/>
+          <stop offset="60%" stop-color="#a88b54" stop-opacity="0.70"/>
+          <stop offset="100%" stop-color="#4d3615" stop-opacity="0.25"/>
         </linearGradient>
-        <filter id="footer-woodcut-handprint" x="-5%" y="-5%" width="110%" height="110%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.04 0.08" numOctaves="2" result="grain" />
-          <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
-        </filter>
       </defs>
-      <g filter="url(#footer-woodcut-handprint)">
-        <!-- 陰影托底層 -->
-        <path d="M -20,16 C 240,42 520,14 800,38 C 1100,16 1300,32 1480,32" stroke="#261504" stroke-width="5.0" stroke-linecap="round" opacity="0.75"/>
-        <path d="M -20,28 C 280,54 550,28 824,47 C 1120,29 1316,40 1480,40" stroke="#261504" stroke-width="4.5" stroke-linecap="round" opacity="0.65"/>
-        <!-- 木刻金線組 (密排推刀紋) -->
-        <path d="M -20,10 C 235,36 515,8 795,32 C 1095,10 1295,26 1480,26" stroke="url(#footerWoodcutGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-        <path d="M -20,14 C 240,39 520,12 800,35 C 1100,14 1300,29 1480,29" stroke="url(#footerWoodcutGold)" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M -20,18 C 245,43 525,16 805,38 C 1105,18 1305,32 1480,32" stroke="url(#footerWoodcutGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
-        <path d="M -20,24 C 260,48 535,22 812,42 C 1110,24 1308,36 1480,36" stroke="url(#footerWoodcutGold)" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
-        <path d="M -20,28 C 280,52 550,26 824,45 C 1120,26 1316,38 1480,38" stroke="url(#footerWoodcutGold)" stroke-width="3.6" stroke-linecap="round"/>
-        <path d="M -20,33 C 290,55 558,30 830,48 C 1125,29 1320,40 1480,40" stroke="url(#footerWoodcutGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-        <path d="M -20,38 C 300,59 565,35 836,51 C 1130,33 1324,43 1480,43" stroke="url(#footerWoodcutGold)" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-      </g>
+      <!-- 陰影托底層 -->
+      <path d="M -20,16 C 240,42 520,14 800,38 C 1100,16 1300,32 1480,32" stroke="#140c03" stroke-width="4.0" stroke-linecap="round" opacity="0.4"/>
+      <!-- 金線層 (精簡3條，淡雅手刻感) -->
+      <path d="M -20,14 C 240,39 520,12 800,35 C 1100,14 1300,29 1480,29" stroke="url(#footerWoodcutGold)" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M -20,24 C 260,48 535,22 812,42 C 1110,24 1308,36 1480,36" stroke="url(#footerWoodcutGold)" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M -20,34 C 300,56 565,33 836,49 C 1130,31 1324,41 1480,41" stroke="url(#footerWoodcutGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.75"/>
     </svg>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
