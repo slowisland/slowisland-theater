@@ -78,7 +78,7 @@
   </script>
 
   <!-- 自定義與增強樣式 -->
-  <link rel="stylesheet" href="css/style.css?v=20260915_v44">
+  <link rel="stylesheet" href="css/style.css?v=20260915_v45">
 </head>
 <body class="bg-linen text-ink antialiased">
 
@@ -100,7 +100,7 @@
   </div>
 
   <!-- ==================== 頂部導覽列 Header & Navbar ==================== -->
-  <header class="sticky top-0 z-40 bg-[#0c0a08]/95 border-b border-[#2a2218] text-stone-200 transition-all duration-300 shadow-xl backdrop-blur-md">
+  <header class="sticky top-0 z-40 bg-[#28160E] border-b border-[#3E2316] text-stone-200 transition-all duration-300 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- 品牌 Logo (置入官方慢島劇團圖檔) -->
@@ -174,7 +174,7 @@
       </div>
 
       <!-- 手機版漢堡按鈕 -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-stone-200 hover:bg-[#2a2218] focus:outline-none" aria-label="切換選單">
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-stone-200 hover:bg-[#3E2316] focus:outline-none" aria-label="切換選單">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -182,7 +182,7 @@
     </div>
 
     <!-- 手機版折疊選單 -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#2a2218] bg-[#0c0a08] px-4 py-6 space-y-4">
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#3E2316] bg-[#28160E] px-4 py-6 space-y-4">
       <a href="#featured" class="mobile-nav-link block font-medium text-amber-400">
         當季主推 <span class="text-xs text-amber-200/70 font-sans italic font-normal">/ Featured Production</span>
       </a>
@@ -224,115 +224,48 @@
   <div class="totem-band-sm"></div>
 
 
-  <!-- ==================== 英雄首頁 Hero Section（暗底配原版木刻金色版畫 Theatrical Obsidian & Authentic Woodcut Gold） ==================== -->
-  <section class="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 text-white theatrical-dark-gold-hero">
-    <!-- ==================== 東南亞質樸木刻金色版畫向量圖騰（精簡2/3、淡雅古金、手刻頓挫、無任何短排線） ==================== -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden" viewBox="0 0 1440 640" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <!-- 柔和淡雅質樸古金 (Soft Pale Antique Gold, 降噪淡化) -->
-        <linearGradient id="wcPaleAntiqueGold" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#4a371c" stop-opacity="0.25"/>
-          <stop offset="25%" stop-color="#7a6239" stop-opacity="0.45"/>
-          <stop offset="50%" stop-color="#b59a67" stop-opacity="0.55"/>
-          <stop offset="75%" stop-color="#8f7445" stop-opacity="0.48"/>
-          <stop offset="100%" stop-color="#4a371c" stop-opacity="0.20"/>
-        </linearGradient>
-
-        <linearGradient id="wcPaleRiverGold" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#8f7445" stop-opacity="0.45"/>
-          <stop offset="30%" stop-color="#baa06d" stop-opacity="0.55"/>
-          <stop offset="60%" stop-color="#a38957" stop-opacity="0.50"/>
-          <stop offset="85%" stop-color="#6e552d" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#3d2b12" stop-opacity="0.18"/>
-        </linearGradient>
-
-        <!-- 淺色木刻底槽陰影 (極淡刻痕) -->
-        <linearGradient id="wcPaleGouge" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#140c03" stop-opacity="0.40"/>
-          <stop offset="60%" stop-color="#1a1005" stop-opacity="0.25"/>
-          <stop offset="100%" stop-color="#080502" stop-opacity="0.08"/>
-        </linearGradient>
-
-        <!-- 極致柔和環境底光 -->
-        <radialGradient id="wcSoftGlow" cx="15%" cy="75%" r="45%">
-          <stop offset="0%" stop-color="#baa06d" stop-opacity="0.06"/>
-          <stop offset="60%" stop-color="#543c18" stop-opacity="0.01"/>
-          <stop offset="100%" stop-color="#0c0a08" stop-opacity="0"/>
-        </radialGradient>
-
-        <!-- 手刻微毛邊濾鏡 -->
-        <filter id="woodcut-subtle-chisel" x="-5%" y="-5%" width="110%" height="110%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.035 0.07" numOctaves="2" result="grain" />
-          <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.2" xChannelSelector="R" yChannelSelector="G" />
-        </filter>
-      </defs>
-
-      <rect width="1440" height="640" fill="url(#wcSoftGlow)"/>
-
-      <!-- ==================== 極簡5道手刻質樸金線（線條精簡2/3、淡雅古金、無任何短排線） ==================== -->
-      <g id="woodcut-artwork-group" filter="url(#woodcut-subtle-chisel)">
-        <!-- 陰刻微槽 -->
-        <g id="wc-shadow-layer">
-          <path d="M -20,160 C 18,170 52,176 90,185 C 132,198 170,218 210,240 C 248,268 285,295 320,325 C 342,355 362,388 380,420" stroke="url(#wcPaleGouge)" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,280 C 25,288 68,296 110,305 C 160,324 205,348 250,370 C 290,400 326,425 360,450 C 388,478 410,505 430,530" stroke="url(#wcPaleGouge)" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,390 C 35,385 85,382 140,385 C 200,402 255,422 310,445 C 362,470 412,492 460,515 C 535,528 605,532 680,535 C 775,530 870,524 960,520 C 1055,512 1150,508 1240,505 C 1315,512 1390,518 1460,525" stroke="url(#wcPaleGouge)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,495 C 48,485 112,478 180,475 C 245,490 308,506 370,525 C 432,544 492,560 550,575 C 628,578 705,580 780,580 C 875,575 970,570 1060,565 C 1145,560 1228,558 1310,555 C 1362,560 1412,565 1460,570" stroke="url(#wcPaleGouge)" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,570 C 65,558 150,550 240,545 C 310,556 375,568 440,580 C 508,594 574,606 640,615 C 720,615 800,615 880,615 C 970,610 1060,605 1150,600 C 1222,596 1292,592 1360,590 C 1395,594 1428,596 1460,600" stroke="url(#wcPaleGouge)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-        <!-- 主淡雅金線 -->
-        <g id="wc-gold-layer">
-          <path d="M -20,160 C 18,170 52,176 90,185 C 132,198 170,218 210,240 C 248,268 285,295 320,325 C 342,355 362,388 380,420" stroke="url(#wcPaleAntiqueGold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,280 C 25,288 68,296 110,305 C 160,324 205,348 250,370 C 290,400 326,425 360,450 C 388,478 410,505 430,530" stroke="url(#wcPaleAntiqueGold)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,390 C 35,385 85,382 140,385 C 200,402 255,422 310,445 C 362,470 412,492 460,515 C 535,528 605,532 680,535 C 775,530 870,524 960,520 C 1055,512 1150,508 1240,505 C 1315,512 1390,518 1460,525" stroke="url(#wcPaleRiverGold)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,495 C 48,485 112,478 180,475 C 245,490 308,506 370,525 C 432,544 492,560 550,575 C 628,578 705,580 780,580 C 875,575 970,570 1060,565 C 1145,560 1228,558 1310,555 C 1362,560 1412,565 1460,570" stroke="url(#wcPaleRiverGold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M -20,570 C 65,558 150,550 240,545 C 310,556 375,568 440,580 C 508,594 574,606 640,615 C 720,615 800,615 880,615 C 970,610 1060,605 1150,600 C 1222,596 1292,592 1360,590 C 1395,594 1428,596 1460,600" stroke="url(#wcPaleRiverGold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </g>
-    </svg>
-
+  <!-- ==================== 英雄首頁 Hero Section ==================== -->
+  <section class="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-32 hero-glow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- 左側文案 (依使用者上傳圖稿精準呈現) -->
+        <!-- 左側文案 -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-[#d4af37]/40 text-[#ffd875] text-xs font-serif tracking-widest shadow-lg backdrop-blur-md">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-amber-500/40 text-amber-300 text-xs font-serif tracking-widest shadow-lg backdrop-blur-md">
             <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
             <span>桃園在地深耕 · 2008年創立演藝團隊</span>
             <span class="text-[10px] text-amber-200/60 font-sans tracking-normal font-light">| Rooted in Taoyuan since 2008</span>
           </div>
 
           <div>
-            <h1 class="font-literary text-3xl sm:text-4xl lg:text-[45px] font-bold text-white leading-[1.8] sm:leading-[1.9] lg:leading-[2.0] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] space-y-2 sm:space-y-3">
+            <h1 class="font-literary text-3xl sm:text-4xl lg:text-[44px] font-bold text-white leading-[1.8] sm:leading-[1.95] lg:leading-[2.1] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)] space-y-3 sm:space-y-4">
               <span class="block">以緩慢舒緩匆忙步調，</span>
               <span class="block">在日常邊陲看見</span>
-              <span class="block text-[#ff4d4d] font-bold drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">生命的劇場。</span>
+              <span class="block"><span class="text-amber-400 underline decoration-amber-400/50 underline-offset-8">生命的劇場</span>。</span>
             </h1>
-            <div class="border-l-2 border-[#d4af37]/60 pl-3.5 mt-4">
-              <p class="font-sans text-xs sm:text-sm tracking-wider text-stone-300/90 font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                Slowing the rush of life —<br>
-                Unveiling theatre at the margins of everyday existence.
-              </p>
-            </div>
+            <p class="font-sans text-xs sm:text-sm tracking-wider text-amber-200/90 font-light mt-5 sm:mt-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              Slowing the rush of life — Unveiling theatre at the margins of everyday existence.
+            </p>
           </div>
 
-          <!-- 劇團宗旨核心卡片 (依圖稿暗底黑玻璃金框設計) -->
-          <div class="relative theatrical-quote-card p-5 sm:p-6 rounded-2xl max-w-2xl">
-            <!-- 金色引號標記 /// -->
-            <div class="flex items-center gap-1 mb-2 text-[#d4af37] text-xs font-mono font-bold tracking-widest select-none">///</div>
+          <div class="relative bg-gradient-to-br from-[#1c1008]/85 via-[#26150b]/80 to-[#140a05]/85 p-5 sm:p-7 rounded-2xl border-l-4 border-amber-500/80 border-t border-r border-b border-amber-500/25 backdrop-blur-md shadow-2xl shadow-black/50 max-w-2xl">
+            <!-- 典雅裝飾雙引號水印 -->
+            <span class="absolute -top-3.5 left-4 font-serif text-3xl sm:text-4xl text-amber-400/50 select-none leading-none pointer-events-none">“</span>
             
-            <p class="font-literary text-sm sm:text-base text-stone-100 leading-[2.1] font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-              慢島劇團立足於台灣桃園，以<span class="text-[#ffd875] font-medium">「慢島」</span>為號，打破典型黑盒子舞台的束縛，從卡拉OK店到常民廚房，從偏鄉小學到工廠廠房，我們用深刻的田野調查，多感官體驗與細膩表演，記錄屬於這座島嶼上最動人的生命記憶。
+            <p class="font-literary text-base sm:text-lg text-[#fdfcf9] leading-[2.2] font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+              慢島劇團立足於台灣桃園，以<span class="text-amber-300 font-medium">「慢島」</span>為號，打破典型黑盒子舞台的束縛。從卡拉OK店到常民廚房、從偏鄉小學到工廠廠房，我們用深刻的田野調查、多感官體驗與細膩表演，記錄屬於這座島嶼上最動人的生命記憶。
             </p>
 
             <!-- 英文翻譯對照 -->
-            <p class="font-sans text-xs text-stone-400/90 leading-relaxed font-light mt-3 pt-3 border-t border-white/10 italic">
+            <p class="font-sans text-xs sm:text-sm text-stone-300/90 leading-relaxed font-light mt-3.5 pt-3.5 border-t border-white/10 italic">
               Based in Taoyuan, Taiwan, Slow Island Theatre breaks free from conventional black-box boundaries. From local karaoke bars to domestic kitchens, from remote rural schools to industrial factory floors, we weave in-depth ethnography, multi-sensory immersion, and nuanced performance to document the island's most poignant human memories.
             </p>
 
-            <!-- 底部精緻金線與標語 -->
-            <div class="mt-3.5 pt-2.5 border-t border-[#d4af37]/20 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#ffd875]/85 font-serif tracking-widest">
+            <!-- 底部精緻金箔線與副標語 -->
+            <div class="mt-3.5 pt-3 border-t border-amber-500/20 flex flex-wrap items-center justify-between gap-2 text-[11px] text-amber-300/85 font-serif tracking-widest">
               <span class="flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
                 <span>生活即劇場 · 田野即舞台</span>
                 <span class="text-[10px] text-stone-400 font-sans tracking-normal italic ml-1">(Life as Theatre, Field as Stage)</span>
               </span>
@@ -341,14 +274,14 @@
           </div>
 
           <!-- 快速按鈕群 -->
-          <div class="flex flex-wrap gap-4 pt-1">
-            <a href="#featured" class="px-6 py-3.5 rounded-xl bg-[#8c1d1d] hover:bg-[#5e1212] text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 flex items-center gap-2 border border-[#d4af37]/30">
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#featured" class="px-6 py-3.5 rounded-xl bg-terracotta hover:bg-terracotta-dark text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 flex items-center gap-2 border border-red-400/30">
               <span>探索主推劇目</span>
               <span class="text-xs font-normal opacity-80 font-sans">/ Explore Shows</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </a>
             
-            <a href="https://www.youtube.com/watch?v=qq_W8N0qOao&t=3s" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-black/60 border border-[#d4af37]/40 hover:border-[#ffd875] text-white font-medium transition-all duration-200 flex items-center gap-2 hover:bg-black/80 backdrop-blur-md shadow-lg cursor-pointer" title="前往 YouTube 觀看慢島劇團簡介影片（新分頁開啟）">
+            <a href="https://www.youtube.com/watch?v=qq_W8N0qOao&t=3s" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-black/60 border border-white/30 hover:border-amber-400 text-white font-medium transition-all duration-200 flex items-center gap-2 hover:bg-black/80 backdrop-blur-md shadow-lg cursor-pointer" title="前往 YouTube 觀看慢島劇團簡介影片（新分頁開啟）">
               <svg class="w-5 h-5 text-red-500 fill-current shrink-0" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
@@ -356,63 +289,75 @@
             </a>
           </div>
 
-          <!-- 關鍵數據標籤 -->
-          <div class="grid grid-cols-3 gap-4 pt-4 max-w-lg">
+          <!-- 關鍵數據 / 特色標籤 -->
+          <div class="grid grid-cols-3 gap-4 pt-5 border-t border-white/20 max-w-lg">
             <div>
-              <span class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow-md">2008</span>
+              <span class="font-serif text-2xl sm:text-3xl font-bold text-amber-400 drop-shadow-md">2008</span>
               <p class="text-xs text-stone-200 drop-shadow-sm font-medium">創團年份 <span class="text-[10px] text-stone-400 font-normal block font-sans">Founded</span></p>
             </div>
             <div>
-              <span class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow-md">15+</span>
+              <span class="font-serif text-2xl sm:text-3xl font-bold text-amber-400 drop-shadow-md">15+</span>
               <p class="text-xs text-stone-200 drop-shadow-sm font-medium">原創代表作 <span class="text-[10px] text-stone-400 font-normal block font-sans">Original Works</span></p>
             </div>
             <div>
-              <span class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow-md">百數場</span>
+              <span class="font-serif text-2xl sm:text-3xl font-bold text-amber-400 drop-shadow-md">百數場</span>
               <p class="text-xs text-stone-200 drop-shadow-sm font-medium">全台巡演深耕 <span class="text-[10px] text-stone-400 font-normal block font-sans">Nationwide Tours</span></p>
             </div>
           </div>
         </div>
 
-        <!-- 右側視覺主圖（依圖稿純粹劇院金框劇照，去除下方白色厚重卡片，忽略右邊佛塔與樹） -->
+        <!-- 右側視覺主圖 -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- 背後柔和金光光暈 -->
-            <div class="absolute -inset-4 bg-[#d4af37]/20 rounded-3xl blur-2xl pointer-events-none"></div>
-
-            <!-- 劇照卡本體 (對應圖稿精緻圓角金色細框，點擊可直達劇目詳情) -->
-            <div class="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden theatrical-photo-frame group cursor-pointer" onclick="openShowModal('galangal-lemongrass-poppy', event)" title="點擊查看《南薑．香茅．罌粟花》完整劇目介紹">
-              <img src="images/唐健哲攝影02979拷貝.jpg" alt="慢島劇團《南薑．香茅．罌粟花》舞台劇照（攝影：唐健哲）" class="w-full h-80 sm:h-[400px] lg:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-              
-              <!-- 沉浸式劇院暗角漸層 -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none"></div>
-
-              <!-- 左上角主推標籤 -->
-              <div class="absolute top-3.5 left-3.5">
-                <span class="bg-[#8c1d1d]/90 backdrop-blur-md text-white text-xs font-serif font-bold px-3 py-1 rounded-full shadow-md border border-white/20">
-                  2026 焦點大戲 · 楊定國之夢
+            <!-- 裝飾背景方塊與底層金色光暈 -->
+            <div class="absolute -inset-6 bg-[#d4af37]/20 rounded-3xl blur-2xl transform rotate-1 pointer-events-none"></div>
+            <div class="absolute -inset-4 bg-terracotta/10 rounded-3xl transform rotate-2 pointer-events-none"></div>
+            <div class="absolute -inset-4 bg-forest/5 rounded-3xl transform -rotate-2 pointer-events-none"></div>
+            
+            <div class="relative z-10 bg-white rounded-2xl overflow-hidden border border-[#e6dfd3] shadow-2xl group">
+              <div class="relative cursor-pointer overflow-hidden" onclick="openShowModal('galangal-lemongrass-poppy', event)" title="點擊查看《南薑．香茅．罌粟花》完整劇目介紹">
+                <img src="images/唐健哲攝影02979拷貝.jpg" alt="南薑．香茅．罌粟花 劇照（攝影：唐健哲）" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-3 left-3 bg-[#8c1d1d]/90 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-full font-medium tracking-wide flex items-center gap-1 shadow-md">
+                  <span>🔍 查看劇目介紹</span>
                 </span>
+                <span class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white/90 text-[10px] px-2 py-0.5 rounded font-light tracking-wider pointer-events-none">劇照攝影：唐健哲</span>
               </div>
-
-              <!-- 右上角開啟原圖捷徑 -->
-              <a href="images/唐健哲攝影02979拷貝.jpg" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="absolute top-3.5 right-3.5 bg-black/60 hover:bg-[#8c1d1d] backdrop-blur-md text-[#ffd875] hover:text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 transition-colors shadow flex items-center gap-1" title="在瀏覽器新分頁開啟劇照原圖">
-                <span>原圖 ↗</span>
-              </a>
-
-              <!-- 底部劇照資訊與攝影師署名 (對齊圖稿設計) -->
-              <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between text-white pointer-events-none">
-                <div>
-                  <span class="text-[11px] text-[#ffd875] font-mono block">《南薑．香茅．罌粟花》</span>
-                  <span class="text-xs font-serif font-semibold text-stone-200">2026 桃園鐵玫瑰藝術節</span>
+              
+              <div class="p-6 bg-white space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold tracking-wider text-terracotta uppercase">2026 桃園鐵玫瑰藝術節 <span class="text-[10px] text-stone-500 font-sans font-normal">/ Iron Rose</span></span>
+                  <span class="text-xs text-ink-muted font-mono font-medium">5/08 - 5/10 展演廳</span>
                 </div>
-                <span class="bg-black/80 backdrop-blur-md text-[#ffd875] text-[10px] px-2.5 py-1 rounded-full border border-[#d4af37]/40 font-mono tracking-wider shadow">
-                  劇照攝影：唐健哲
-                </span>
+                <h3 class="font-serif text-2xl font-bold text-ink cursor-pointer hover:text-terracotta transition-colors" onclick="openShowModal('galangal-lemongrass-poppy', event)" title="點擊查看《南薑．香茅．罌粟花》完整劇目介紹">
+                  《南薑．香茅．罌粟花》
+                  <span class="block text-xs text-stone-500 font-mono font-medium mt-0.5">Poppy, Lemongrass and Galangal</span>
+                </h3>
+                <p class="font-literary text-sm italic text-[#8c3622] leading-relaxed tracking-wider">
+                  「在邊境與島嶼之間尋找家的味道」
+                  <span class="block text-xs font-sans not-italic text-stone-500 font-normal mt-0.5">"Searching for the Taste of Home Between Borders and Islands"</span>
+                </p>
+                <div class="pt-2 flex flex-wrap justify-between items-center gap-2">
+                  <a href="#featured" role="button" onclick="scrollToFeatured(event)" class="text-xs font-bold text-terracotta hover:text-terracotta-dark hover:underline flex items-center gap-1 cursor-pointer py-1.5 px-1" title="前往查看《南薑．香茅．罌粟花》完整劇目介紹與演職員陣容">
+                    <span>查看劇目介紹</span>
+                    <span class="text-[10px] opacity-75 font-sans font-normal">/ Details →</span>
+                  </a>
+                  <a href="#featured-reviews" class="inline-flex items-center gap-1 text-xs bg-[#8c1d1d]/10 hover:bg-[#8c1d1d] hover:text-white text-[#8c1d1d] px-2.5 py-1.5 rounded-lg font-medium transition-colors cursor-pointer" title="查看本劇 10 篇專文劇評與各界媒體報導">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                    <span>劇評報導 (10篇) ↗</span>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=oU6rtkHSN-E&t=2s" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs bg-red-50 hover:bg-red-100 text-red-600 px-3 py-1.5 rounded-lg font-medium transition-colors cursor-pointer" title="前往 YouTube 觀看官方片花預告（新分頁開啟）">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span>片花影音 ↗ <span class="text-[10px] opacity-75 font-sans font-light">/ Trailer</span></span>
+                  </a>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
   <div class="totem-band"></div>
@@ -1557,49 +1502,31 @@
   <div class="totem-band"></div>
 
 
-  <!-- ==================== 頁尾 Footer（暗底配原版木刻金色版畫） ==================== -->
-  <footer class="relative overflow-hidden py-14 text-xs bg-[#0c0a08] text-stone-300 border-t border-[#d4af37]/30">
-    <!-- 頁尾頂端東南亞木刻金色波紋 (Pale Muted Authentic Woodcut Gold Waves) -->
-    <svg class="absolute top-0 left-0 right-0 w-full h-16 pointer-events-none select-none z-0" viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="footerWoodcutGold" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#4a371c" stop-opacity="0.25"/>
-          <stop offset="30%" stop-color="#b59a67" stop-opacity="0.55"/>
-          <stop offset="70%" stop-color="#8f7445" stop-opacity="0.45"/>
-          <stop offset="100%" stop-color="#3d2b12" stop-opacity="0.18"/>
-        </linearGradient>
-      </defs>
-      <!-- 陰影托底層 -->
-      <path d="M -20,18 C 240,42 520,14 800,38 C 1100,16 1300,32 1480,32" stroke="#140c03" stroke-width="3.8" stroke-linecap="round" opacity="0.35"/>
-      <!-- 金線層 (精簡3條淡雅微波) -->
-      <path d="M -20,16 C 240,40 520,12 800,36 C 1100,14 1300,30 1480,30" stroke="url(#footerWoodcutGold)" stroke-width="2.2" stroke-linecap="round"/>
-      <path d="M -20,26 C 270,48 540,24 815,44 C 1115,24 1310,38 1480,38" stroke="url(#footerWoodcutGold)" stroke-width="2.6" stroke-linecap="round"/>
-      <path d="M -20,36 C 300,56 565,34 836,50 C 1130,32 1324,42 1480,42" stroke="url(#footerWoodcutGold)" stroke-width="1.8" stroke-linecap="round"/>
-    </svg>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- ==================== 頁尾 Footer ==================== -->
+  <footer class="bg-forest-dark text-stone-300 py-12 border-t border-white/10 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         
         <div class="flex items-center gap-4">
-          <div class="bg-[#F8F1E4] px-3.5 py-1.5 rounded-xl flex items-center shadow-md border border-[#d4af37]/30">
+          <div class="bg-[#F8F1E4] px-3.5 py-1.5 rounded-xl flex items-center shadow-sm">
             <img src="images/慢島logo slow-logo-大 拷貝 2.png" alt="慢島劇團 Slow Island Theatre Group" class="h-8 w-auto object-contain">
           </div>
           <div>
             <span class="font-serif text-base font-bold text-white block">慢島劇團 Slow Island Theatre Group</span>
-            <span class="text-[10px] text-[#ffd875]/80">桃園市立案演藝團隊 · 2008年創立</span>
+            <span class="text-[10px] text-stone-400">桃園市立案演藝團隊 · 2008年創立</span>
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-6 text-stone-300">
-          <a href="#featured" class="hover:text-[#ffd875] transition-colors">當季主推</a>
-          <a href="#about" class="hover:text-[#ffd875] transition-colors">關於慢島</a>
-          <a href="#repertoire" class="hover:text-[#ffd875] transition-colors">精選劇作</a>
-          <a href="#stage-gallery" class="hover:text-[#ffd875] transition-colors">舞台光影</a>
+        <div class="flex flex-wrap items-center justify-center gap-6 text-stone-400">
+          <a href="#featured" class="hover:text-white transition-colors">當季主推</a>
+          <a href="#about" class="hover:text-white transition-colors">關於慢島</a>
+          <a href="#repertoire" class="hover:text-white transition-colors">精選劇作</a>
+          <a href="#stage-gallery" class="hover:text-white transition-colors">舞台光影</a>
           <a href="https://www.youtube.com/@SlowislandArtTheatre" target="_blank" class="hover:text-red-400 transition-colors">YouTube 頻道</a>
-          <a href="mailto:slowislandart@gmail.com" class="hover:text-[#ffd875] transition-colors">slowislandart@gmail.com</a>
+          <a href="mailto:slowislandart@gmail.com" class="hover:text-terracotta transition-colors">slowislandart@gmail.com</a>
         </div>
 
-        <div class="text-stone-400 text-[11px] text-center md:text-right">
+        <div class="text-stone-500 text-[11px] text-center md:text-right">
           © <span id="copyright-year">2026</span> 慢島劇團 Slow Island Theatre. All rights reserved.
         </div>
 
@@ -1838,6 +1765,6 @@
 
 
   <!-- 載入主程式邏輯 -->
-  <script src="js/main.js?v=20260915_v37"></script>
+  <script src="js/main.js?v=20260915_v45"></script>
 </body>
 </html>
