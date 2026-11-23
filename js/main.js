@@ -82,6 +82,15 @@ const productions = [
     youtubeUrl: "https://www.youtube.com/watch?v=oU6rtkHSN-E&t=2s",
     reviews: [
       {
+        title: "如何在劇場談論家族遷移史？《南薑．香茅．罌粟花》",
+        media: "表演藝術評論台",
+        author: "廖建豪",
+        date: "2026.06",
+        tag: "深度劇評",
+        url: "https://pareviews.ncafroc.org.tw/comments/c7026848-8e13-4ece-8e89-8e4709f38c99",
+        quote: "慢島劇團《南薑．香茅．罌粟花》以主角楊定國的家族遷徙史為主軸，呈現約莫1950年代以降的滇、緬、泰邊界地緣政治變動，以及在這樣動盪背景之下四處漂泊的家族遷移故事。"
+      },
+      {
         title: "故土、血脈與國家，誰才能定義「家」？——《南薑．香茅．罌粟花》",
         media: "表演藝術評論台",
         author: "白斐嵐",
@@ -2477,7 +2486,7 @@ function renderRepertoire(items) {
             <div class="flex items-center justify-between mb-2">
               <span class="flex items-center gap-1.5 text-xs font-bold text-[#8c1d1d]">
                 <span class="w-2 h-2 rounded-full bg-[#8c1d1d]"></span>
-                <span>歷年專文劇評與媒體報導（共 10 篇）</span>
+                <span>歷年專文劇評與媒體報導（共 ${show.reviews ? show.reviews.length : 11} 篇）</span>
               </span>
             </div>
             <div class="space-y-1.5 bg-[#faf6ef] p-3 rounded-xl border border-[#ebdcca] text-[11px] shadow-inner max-h-56 overflow-y-auto">
